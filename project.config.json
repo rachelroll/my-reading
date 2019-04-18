@@ -1,0 +1,87 @@
+{
+	"description": "Project configuration file",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.4",
+	"appid": "wxeec1130bf62eea21",
+	"projectname": "my-reading",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": 0,
+					"name": "报名页",
+					"pathName": "pages/register/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "好友金句",
+					"pathName": "pages/recommendation/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "冠军排行",
+					"pathName": "pages/champion/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的主页",
+					"pathName": "pages/user/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "线下读书会",
+					"pathName": "pages/offline/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "图书详情页",
+					"pathName": "pages/book_info/index",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

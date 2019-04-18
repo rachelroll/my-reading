@@ -1,0 +1,42 @@
+.part-line {
+  background-color: #563d7c;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  margin-top: 1px;
+  color: white;
+  padding-left: 20px;
+  font-size: 80%;
+  line-height: 30px;
+  text-align: center;
+}
+
+.flex {
+  flex-flow: row nowrap;
+  display: flex;
+   justify-content: left;
+}
+
+.comment {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.weui-btn {
+  background-color: #563d7c;
+  height: 50px;
+  line-height: 50px;
+  margin: 40px 20px 40px 20px;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  color: white;
+}
+
+.weui-uploader__hd {
+  margin: 20px 30px 20px 20px;
+}
+
+.weui-uploader__title {
+  font-size: 90%;
+}

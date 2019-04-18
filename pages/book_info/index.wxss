@@ -1,0 +1,7 @@
+.book-content {
+  margin: 5px;
+}
+
+.wrap-container {
+  padding: 10px 20px;
+}

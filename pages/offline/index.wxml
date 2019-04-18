@@ -1,0 +1,19 @@
+<view class='page'>
+  <view class='flex title'>
+    <text class='flex-item'>报名中</text>
+    <text class='flex-item more'>查看更多</text>
+  </view>
+  
+  <view class='meeting flex'>
+    <view class='meeting_item'>
+      <image src='../resources/008.jpg'></image>
+      
+    </view>
+    <view class='meeting_item'>
+      <image src='../resources/008.jpg'></image>
+    </view>
+    <view class='meeting_item'>
+      <image src='../resources/008.jpg'></image>
+    </view>
+  </view>
+</view>

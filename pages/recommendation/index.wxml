@@ -1,0 +1,116 @@
+<!-- 引入 wxs 脚本 -->
+<wxs module="strCut" src="./index.wxs"></wxs>
+
+<swiper
+  indicator-dots=true
+  autoplay=true
+  interval="4000"
+  duration="400"
+  circular=true
+>
+  <block wx:for="{{ images }}">
+    <swiper-item>
+      <view class="top-banner">
+        <image src="{{ item }}"></image>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="category">
+  <button class="btn">推荐</button>
+  <button class="btn">心灵</button>
+  <button class="btn">管理</button>
+  <button class="btn">职场</button>
+  <button class="btn">家庭</button>
+</view>
+
+<view class="title">
+  <text>每日金句</text>
+</view>
+
+<view class='line'></view>
+
+<view class="card">
+  <view class='card-left'>
+    <view class='img-cover'>
+      <image src='../resources/book.jpg' mode='aspectFill'></image>
+    </view>
+  </view>
+  <view class='card-right'>
+    <text class="book-name">书名: 《我所理解的生活》</text>
+    <text class="comments">好友评语: {{ strCut.Sub(comments) }}</text>
+    <view class="tab-row">
+      <button class="tab-btn">点赞</button>
+      <button class="tab-btn">转发</button>
+      <button class="tab-btn">评论</button>
+    </view>
+  </view>
+</view>
+
+<view class="card">
+  <view class='card-left'>
+    <view class='img-cover'>
+      <image src='../resources/book.jpg' mode='aspectFill'></image>
+    </view>
+  </view>
+  <view class='card-right'>
+    <text class="book-name">书名: 《我所理解的生活》</text>
+    <text class="comments">好友评语: {{ strCut.Sub(comments) }}</text>
+    <view class="tab-row">
+      <button class="tab-btn">点赞</button>
+      <button class="tab-btn">转发</button>
+      <button class="tab-btn">评论</button>
+    </view>
+  </view>
+</view>
+
+<view class="card">
+  <view class='card-left'>
+    <view class='img-cover'>
+      <image src='../resources/book.jpg' mode='aspectFill'></image>
+    </view>
+  </view>
+  <view class='card-right'>
+    <text class="book-name">书名: 《我所理解的生活》</text>
+    <text class="comments">好友评语: {{ strCut.Sub(comments) }}</text>
+    <view class="tab-row">
+      <button class="tab-btn">点赞</button>
+      <button class="tab-btn">转发</button>
+      <button class="tab-btn">评论</button>
+    </view>
+  </view>
+</view>
+
+<view class="title">
+  <text>好书推荐</text>
+</view>
+
+<view class='line'></view>
+
+<view class="category">
+  <button class="btn" bindtap='bookList' data-variable="8">创业</button>
+  <button class="btn" bindtap='bookList' data-variable="5">心灵</button>
+  <button class="btn" bindtap='bookList' data-variable="200018971">管理</button>
+  <button class="btn" bindtap='bookList' data-variable="7">职场</button>
+  <button class="btn" bindtap='bookList' data-variable="6">家庭</button>
+</view>
+
+<block wx:for="{{ books }}" wx:for-item="book">
+  <navigator url="../book_info/index?id={{ book.id }}">
+    <view class="card">
+        <view class='card-left'>
+        <view class='img-cover'>
+          <image src='{{ book.imageUrl }}' mode='aspectFill'></image>
+        </view>
+      </view>
+      <view class='card-right'>
+        <text class="book-name">书名: {{ book.title }}</text>
+        <text class="comments">简介: {{ strCut.Sub(book.summary) }}</text>
+      </view>
+    </view>
+  </navigator>
+</block>
+
+
+

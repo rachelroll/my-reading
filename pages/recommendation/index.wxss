@@ -1,0 +1,97 @@
+.top-banner {
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 6px;
+  text-align: center;
+}
+
+.top-banner image {
+  display: block;
+  height: 178px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.category {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content:space-around;
+  margin: 14px;
+}
+
+.btn {
+  height: 30px;
+  background-color: #563d7c;
+  line-height: 30px;
+  color: white;
+  font-size: 70%;
+}
+
+.title {
+  margin-left: 20px;
+  color: #1f1f1f;
+}
+
+.line{
+width: 100%;
+margin-top: 20rpx;
+border-top:1px #563d7c solid;
+}
+
+.card {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  margin: 14px;
+}
+
+.card-left {
+  width: 180px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.img-cover {
+  /* border: 4px solid black; */
+  width: 90px;
+  height: 120px;
+}
+
+.img-cover image {
+  width: 90px;
+  height: 120px;
+  border-radius: 5px;
+}
+
+.card-right {
+  padding-right: 10px;
+}
+
+.comments  {
+  font-size: 60%;
+  display: block;
+}
+
+.book-name {
+  font-size: 80%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tab-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin-top: 16px;
+}
+
+.tab-btn {
+  height: 20px;
+  font-size: 60%;
+  line-height: 20px;
+  border: 1px solid #563d7c;
+  background-color: white;
+}
+

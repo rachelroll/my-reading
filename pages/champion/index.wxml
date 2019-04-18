@@ -1,0 +1,62 @@
+<swiper
+  indicator-dots=true
+  autoplay=true
+  interval="4000"
+  duration="400"
+  circular=true
+>
+  <block wx:for="{{ images }}">
+    <swiper-item>
+      <view class="top-banner">
+        <image src="{{ item }}"></image>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="category">
+  <button class="btn">推荐</button>
+  <button class="btn">心灵</button>
+  <button class="btn">管理</button>
+  <button class="btn">职场</button>
+  <button class="btn">家庭</button>
+</view>
+
+<view class="champion-card">
+  <view>年冠军</view>
+  <view class='champion-info'>
+    <view class='champion-img'>
+      <image src='../resources/user.png' style="width: 50px; height: 50px" mode='aspectFit'></image>
+    </view>
+    <view class='champion-details'>
+      <text>姓名: 刘哈哈</text>
+      <text>评论: 说了理论上来说累死了</text>
+    </view>
+  </view>
+</view>
+
+<view class="champion-card">
+  <view>月冠军</view>
+  <view class='champion-info'>
+    <view class='champion-img'>
+      <image src='../resources/user.png' style="width: 50px; height: 50px" mode='aspectFit'></image>
+    </view>
+    <view class='champion-details'>
+      <text>姓名: 刘哈哈</text>
+      <text>评论: 说了理论上来说累死了</text>
+    </view>
+  </view>
+</view>
+
+<view class="champion-card">
+  <view>周冠军</view>
+  <view class='champion-info'>
+    <view class='champion-img'>
+      <image src='../resources/user.png' style="width: 50px; height: 50px" mode='aspectFit'></image>
+    </view>
+    <view class='champion-details'>
+      <text>姓名: 刘哈哈</text>
+      <text>评论: 说了理论上来说累死了</text>
+    </view>
+  </view>
+</view>

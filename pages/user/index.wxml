@@ -1,0 +1,34 @@
+ <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 确认授权登录 </button>
+    <block wx:else>
+      <view class="banner flex-row">
+        <view class="flex-view-item banner-left">
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+          <text class="userinfo-details">来自 北京 朝阳</text>
+          <text class="userinfo-details">读龄 1 年</text>
+          <text class="userinfo-details">读过 12 本</text>
+        </view>
+        <view class="flex-view-item banner-right">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+
+<view class="statistic-items">
+  <view class="item">
+    <text>10</text>
+    <text>想读</text>
+  </view>
+  <view class="item">
+    <text>10</text>
+    <text>已报名</text>
+  </view>
+  <view class="item">
+    <text>10</text>
+    <text>读过</text>
+  </view>
+</view>
+
+<view class='line'></view>
+

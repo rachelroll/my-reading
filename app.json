@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/register/index",
+    "pages/recommendation/index",
+    "pages/champion/index",
+    "pages/user/index",
+    "pages/offline/index",
+    "pages/book_info/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#563d7c",
+    "navigationBarTitleText": "读书争霸赛",
+    "navigationBarTextStyle": "white"
+  }
+}

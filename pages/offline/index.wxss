@@ -1,0 +1,28 @@
+.meeting{
+  justify-content: space-around;
+}
+
+.meeting_item {
+   height: 140rpx;
+  border:1px solid green;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 4px;
+  }
+
+  .page {
+    margin: 8px;
+  }
+
+  .flex {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+.title {
+  justify-content: space-between
+}
+
+ .more {
+    font-size: 70%;
+  }

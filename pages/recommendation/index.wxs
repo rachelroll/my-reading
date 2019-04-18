@@ -1,0 +1,11 @@
+var Sub = function(val) {
+  if(val.length == 0 || val == undefined) {
+    return;
+  } else if(val.length > 40) {
+    return val.substring(0, 40) + '...';        
+  } else {
+    return val;
+  }
+}
+
+module.exports.Sub = Sub;

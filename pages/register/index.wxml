@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<!-- <div class="part-line">书籍资料填写</div> -->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <div class="weui-cells weui-cells_form">
+    <div class="weui-cell flex">
+        <!-- <div class="weui-cell__hd"> -->
+        <label class="weui-label">书名</label>
+        <input class="weui-input" type="text" name="book_name" />
+        <!-- </div> -->
+    </div>
+    <div class="weui-cell flex">
+        <!-- <div class="weui-cell__hd"> -->
+        <label class="weui-label">介绍</label>
+        <input class="weui-input" type="text" name="descripton"/>
+        <!-- </div> -->
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__bd">
+        <label class="weui-label comment">书评</label>
+        <textarea class="weui-textarea" placeholder="请分享你对这本书的评价" rows="3" name="post_content"></textarea>
+            <div class="weui-textarea-counter"><span>0</span>/200</div>
+        </div>
+    </div>
+  </div>
+           <view class="weui-cell">
+               <view class="weui-cell__bd">
+                   <view class="weui-uploader">
+                       <view class="weui-uploader__hd">
+                           <view class="weui-uploader__title">图片上传</view>
+                           <view class="weui-uploader__info">{{images.length}}/1</view>
+                       </view>
+                       <view class="weui-uploader__bd">
+                           <view class="weui-uploader__files" id="uploaderFiles" name="cover">
+                               <block wx:for="{{images}}" wx:key="*this">
+                                   <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                                       <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                                   </view>
+                               </block>
+                           </view>
+                           <block wx:if="{{images.length != 1}}">
+                            <view class="weui-uploader__input-box">
+                               <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                            </view>
+                           </block>
+                       </view>
+                   </view>
+               </view>
+           </view>
+
+  <div class="weui-btn">
+      <button id="submit" formType="submit">生成报名卡</button>
+  </div>
+</form>

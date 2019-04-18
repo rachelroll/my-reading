@@ -1,0 +1,89 @@
+<!--index.wxml-->
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="confirm-btn" bindtap='login'> 
+    确认授权登录 
+  </button>
+
+    <block wx:else>
+      <view class="banner flex-row">
+        <view class="flex-view-item banner-left">
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+          <text class="userinfo-details">来自 北京 朝阳</text>
+          <text class="userinfo-details">读龄 1 年</text>
+          <text class="userinfo-details">读过 12 本</text>
+        </view>
+        <view class="flex-view-item banner-right">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </view>
+      </view>
+
+<!-- <button bindtap='login'>
+  确认授权登录
+</button> -->
+
+  <swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay=true
+  interval="4000"
+  duration="400"
+  vertical=true
+  circular=true
+>
+  <block wx:for="{{posts}}" wx:for-item="post">
+    <swiper-item>
+      <view class="comments">
+        <text>{{ post.user_nickname }} 评论了</text> {{ post.book_name }}
+       </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+  <div class="weui-search-bar" id="search_bar">
+    <form class="weui-search-bar__form">
+        <div class="weui-search-bar__box">
+            <input type="text" class="weui-search-bar__input" id="search_input"  name="search" placeholder="搜索" auto-focus />
+        </div>
+    </form>
+</div>
+
+  <view class="cards">
+    <view class="card-item">
+      <navigator url="../register/index" hover-class="navigator-hover">
+        <image src="../resources/008.jpg" ></image>
+        <div class="placeholder">我要报名</div>
+      </navigator>
+    </view>
+    <view class="card-item">
+      <navigator url="../recommendation/index">
+        <image src="../resources/008.jpg" mode="bottom left"></image>
+        <div class="placeholder">好友金句</div>
+      </navigator>
+    </view>
+  </view>
+  <view class="cards">
+        <view class="card-item">
+          <navigator url='../champion/index'>
+            <image src="../resources/008.jpg" mode="bottom right"></image>
+            <div class="placeholder">冠军排行</div>
+          </navigator>
+        </view>
+        <view class="card-item">
+          <navigator url='../user/index'>
+            <image src="../resources/008.jpg" mode="center"></image>
+          <div class="placeholder">我的主页</div>
+          </navigator>
+        </view>
+  </view>
+
+<view class="cards">
+  <view class="card-item">
+    <navigator url='../offline/index'>
+      <image src="../resources/008.jpg" mode='widthFix'  style='height:20em; width:30em'></image>
+    <div class="placeholder" style="left: 130px">线下读书会</div>
+    </navigator>
+  </view>
+</view>
+</block>
+
+
+
+

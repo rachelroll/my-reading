@@ -1,0 +1,57 @@
+.top-banner {
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 6px;
+  text-align: center;
+}
+
+.top-banner image {
+  display: block;
+  height: 178px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.category {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content:space-around;
+  margin: 20px 14px 20px;
+}
+
+.btn {
+  height: 30px;
+  background-color: #563d7c;
+  line-height: 30px;
+  color: white;
+  font-size: 70%;
+}
+
+.champion-card {
+  width: 334px;
+  height: 100px;
+  background-color: #563d7c;
+  border-radius: 5px;
+  margin: 18px auto;
+  padding: 6px 16px;
+  color: white;
+}
+
+.champion-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.champion-details {
+  font-size: 70%;
+}
+
+.champion-details text {
+  display: block;
+}
+
+.champion-img {
+  margin-right: 18px;
+}
