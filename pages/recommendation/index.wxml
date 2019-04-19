@@ -31,56 +31,24 @@
 
 <view class='line'></view>
 
-<view class="card">
-  <view class='card-left'>
-    <view class='img-cover'>
-      <image src='../resources/book.jpg' mode='aspectFill'></image>
+<block wx:for="{{ posts }}" wx:for-item="post">
+  <view class="card">
+    <view class='card-left'>
+      <view class='img-cover'>
+        <image src='{{ post.cover }}' mode='aspectFill'></image>
+      </view>
+    </view>
+    <view class='card-right'>
+      <text class="book-name">书名: {{ post.book_name}}</text>
+      <text class="comments">好友评语: {{ post.content }}</text>
+      <view class="tab-row">
+        <button class="tab-btn">点赞</button>
+        <button class="tab-btn">转发</button>
+        <button class="tab-btn">评论</button>
+      </view>
     </view>
   </view>
-  <view class='card-right'>
-    <text class="book-name">书名: 《我所理解的生活》</text>
-    <text class="comments">好友评语: {{ strCut.Sub(comments) }}</text>
-    <view class="tab-row">
-      <button class="tab-btn">点赞</button>
-      <button class="tab-btn">转发</button>
-      <button class="tab-btn">评论</button>
-    </view>
-  </view>
-</view>
-
-<view class="card">
-  <view class='card-left'>
-    <view class='img-cover'>
-      <image src='../resources/book.jpg' mode='aspectFill'></image>
-    </view>
-  </view>
-  <view class='card-right'>
-    <text class="book-name">书名: 《我所理解的生活》</text>
-    <text class="comments">好友评语: {{ strCut.Sub(comments) }}</text>
-    <view class="tab-row">
-      <button class="tab-btn">点赞</button>
-      <button class="tab-btn">转发</button>
-      <button class="tab-btn">评论</button>
-    </view>
-  </view>
-</view>
-
-<view class="card">
-  <view class='card-left'>
-    <view class='img-cover'>
-      <image src='../resources/book.jpg' mode='aspectFill'></image>
-    </view>
-  </view>
-  <view class='card-right'>
-    <text class="book-name">书名: 《我所理解的生活》</text>
-    <text class="comments">好友评语: {{ strCut.Sub(comments) }}</text>
-    <view class="tab-row">
-      <button class="tab-btn">点赞</button>
-      <button class="tab-btn">转发</button>
-      <button class="tab-btn">评论</button>
-    </view>
-  </view>
-</view>
+</block>
 
 <view class="title">
   <text>好书推荐</text>

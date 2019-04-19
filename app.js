@@ -49,7 +49,7 @@ App({
       }
     })
 
-    // 获取用户信息
+    // 获取用户信息, 头像, 昵称
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {

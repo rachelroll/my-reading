@@ -8,8 +8,8 @@
         <view class="flex-view-item banner-left">
           <text class="userinfo-nickname">{{userInfo.nickName}}</text>
           <text class="userinfo-details">来自 北京 朝阳</text>
-          <text class="userinfo-details">读龄 1 年</text>
-          <text class="userinfo-details">读过 12 本</text>
+          <text class="userinfo-details">读龄 {{ age }}</text>
+          <text class="userinfo-details">读过 {{ posts_count }} 本</text>
         </view>
         <view class="flex-view-item banner-right">
           <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
