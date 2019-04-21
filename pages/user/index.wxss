@@ -23,7 +23,7 @@
 }
 
 .banner {
-  background-color: #563d7c;
+  background-color: #5b7257;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   height: 120px;
@@ -62,5 +62,5 @@
 .line{
 width: 100%;
 margin-top: 30rpx;
-border-top:6px #73648a solid;
+border-top:6px #5b7257 solid;
 }

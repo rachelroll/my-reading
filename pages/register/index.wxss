@@ -1,5 +1,5 @@
 .part-line {
-  background-color: #563d7c;
+  background-color: #5b7257;
   height: 30px;
   width: 100%;
   display: flex;
@@ -23,7 +23,7 @@
 }
 
 .weui-btn {
-  background-color: #563d7c;
+  background-color: #5b7257;
   height: 50px;
   line-height: 50px;
   margin: 40px 20px 40px 20px;

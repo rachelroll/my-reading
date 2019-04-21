@@ -36,11 +36,8 @@ Page({
   },
 
   formSubmit: function (e) {
-
     var that = this;
-    
     that.data.userInfo = app.globalData.userInfo;
-
     if (e.detail.value.book_name.length == 0 || e.detail.value.post_content.length == 0) {
       wx.showToast({
         title: '书名和书评不得为空!',
@@ -53,9 +50,11 @@ Page({
     } else {
       console.log(that.data.images[0])
 
+      // 提交表单
       wx.getStorage({
         key: 'token',
         success: function(res) {
+          // 表单提交的数据
           var data = {
             book_name: e.detail.value.book_name,
             post_content: e.detail.value.post_content,
@@ -65,7 +64,10 @@ Page({
             token: res.data
           }
 
-          // 上传图片
+          app.globalData.book_name = e.detail.value.book_name;
+          app.globalData.content = e.detail.value.post_content;
+
+          // 上传图片及表单内容
           wx.uploadFile({
             url: 'http://127.0.0.1:8001/api/post',
             filePath: that.data.images[0],
@@ -76,17 +78,15 @@ Page({
             formData: data,    //请求额外的form data
             success: function (res) {
               console.log(res.data);
-
               // 如果 token 过期, 重新登录
               if (res.data.code == 202) {
                 console.log('here it is')
                 _js.login();
-              }
-
-              if (res.statusCode == 200) {
-                typeof success == "function" && success(res.data);
               } else {
-                typeof fail == "function" && fail(res.data);
+                // 关闭当前页面，跳转到生成读书卡页面
+                wx.navigateTo({
+                  url: '../card/index?book=e.detail.value.book_name'
+                })
               }
             },
             fail: function (res) {
@@ -95,8 +95,6 @@ Page({
               typeof fail == "function" && fail(res.data);
             }
           })
-
-
         },
       })
     }

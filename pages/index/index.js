@@ -59,6 +59,7 @@ Page({
       url: "http://127.0.0.1:8001/api/posts",
       
       success: function (res) {
+        console.log(res.data.data[0].cover)
         that.setData({
           'posts': res.data.data
         });

@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  background-color: #563d7c;
+  background-color: #5b7257;
   color: white;
   text-align: center;
   line-height: 90px;
@@ -38,7 +38,7 @@
 }
 
 .banner {
-  background-color: #563d7c;
+  background-color: #5b7257;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   height: 120px;

@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 6,
 			"list": [
 				{
 					"id": 0,
@@ -79,6 +79,12 @@
 					"name": "图书详情页",
 					"pathName": "pages/book_info/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "读书卡页面",
+					"pathName": "pages/card/index",
 					"scene": null
 				}
 			]
