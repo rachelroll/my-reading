@@ -1,5 +1,7 @@
 /**app.wxss**/
 @import 'style/weui.wxss';
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
 
 /* html 转 wxml */
 @import "/wxParse/wxParse.wxss";
@@ -12,4 +14,4 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}

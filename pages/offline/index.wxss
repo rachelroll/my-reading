@@ -26,3 +26,7 @@
  .more {
     font-size: 70%;
   }
+ .r-btn {
+     color: #4F7355;
+     margin-bottom:20rpx;
+ }

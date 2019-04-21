@@ -1,13 +1,19 @@
 <view class='page'>
+  <navigator url="../offline/form" hover-class="navigator-hover">
+  <button class="cu-btn block line-orange lg margin-bottom-lg">
+    <text class="icon-form"></text>我要发起线下读书会...
+  </button>
+  </navigator>
+
   <view class='flex title'>
     <text class='flex-item'>报名中</text>
     <text class='flex-item more'>查看更多</text>
   </view>
-  
+
   <view class='meeting flex'>
     <view class='meeting_item'>
       <image src='../resources/008.jpg'></image>
-      
+
     </view>
     <view class='meeting_item'>
       <image src='../resources/008.jpg'></image>
