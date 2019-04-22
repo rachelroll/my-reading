@@ -1,1 +1,19 @@
 /* pages/offline/form.wxss */
+.page {
+    margin: 8px;
+}
+.page .cu-form-group .title {
+    text-align: justify;
+    padding-right: 30rpx;
+    font-size: 32rpx;
+    position: relative;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+.page .cu-form-group input {
+    flex: 1;
+    font-size: 32rpx;
+    color: #555;
+    padding-right: 20rpx;
+}
