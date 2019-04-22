@@ -21,7 +21,7 @@
 
 .btn {
   height: 30px;
-  background-color: #563d7c;
+  background-color: #5b7257;
   line-height: 30px;
   color: white;
   font-size: 70%;
@@ -30,7 +30,7 @@
 .champion-card {
   width: 334px;
   height: 100px;
-  background-color: #563d7c;
+  background-color: #5b7257;
   border-radius: 5px;
   margin: 18px auto;
   padding: 6px 16px;
@@ -54,4 +54,60 @@
 
 .champion-img {
   margin-right: 18px;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.flex-inner {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.table-header {
+  font-size: 70%;
+  background-color: #5b7257;
+  color: white;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 14px;
+  margin: 5px 0;
+  /* width: 100%; */
+}
+
+.content {
+  padding: 0 14px;
+  height: 50px;
+}
+
+.userinfo-avatar {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.invite {
+  background-color: #5b7257;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-size: 80%;
+  width: 120px;
+  margin: 10px 20px;
+}
+
+.footer {
+  padding: 0 10px;
+}
+
+.line{
+width: 100%;
+margin-top: 20rpx;
+border-top:1px #5b7257 dashed;
 }

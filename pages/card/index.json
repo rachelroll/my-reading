@@ -2,5 +2,8 @@
   "backgroundTextStyle": "dark",
   "navigationBarBackgroundColor": "#5b7257",
   "navigationBarTitleText": "佳禾读书会",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "poster": "../../wxa-plugin-canvas/poster/index"
+  }
 }

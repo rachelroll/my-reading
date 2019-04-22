@@ -27,7 +27,7 @@ App({
             console.log(res)
             // 发送 res.code 到后台换取 openId, sessionKey, unionId
             wx.request({
-              url: 'http://127.0.0.1:8001/api/user-info', //接口地址
+              url: 'http://127.0.0.1:8000/api/user-info', //接口地址
               data: { code: res.code },
               header: {
                 'content-type': 'application/json' //默认值
@@ -57,7 +57,10 @@ App({
           wx.getUserInfo({
             success: res => {
               that.globalData.userInfo = res.userInfo
-
+              wx.setStorage({
+                key: 'userInfo',
+                data: res.userInfo,
+              })
               console.log(res.userInfo)
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -78,7 +81,7 @@ App({
         if(!res) {
           // 可以将 res 发送给后台解码出 unionId
           wx.request({
-            url: 'http://127.0.0.1:8001/api/user-store', //接口地址
+            url: 'http://127.0.0.1:8000/api/user-store', //接口地址
             data: {
               nickname: that.globalData.nickName,
               avatar: that.globalData.avatarUrl,

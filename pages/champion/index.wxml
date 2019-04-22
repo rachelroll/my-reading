@@ -14,15 +14,7 @@
   </block>
 </swiper>
 
-<view class="category">
-  <button class="btn">推荐</button>
-  <button class="btn">心灵</button>
-  <button class="btn">管理</button>
-  <button class="btn">职场</button>
-  <button class="btn">家庭</button>
-</view>
-
-<view class="champion-card">
+<!-- <view class="champion-card">
   <view>年冠军</view>
   <view class='champion-info'>
     <view class='champion-img'>
@@ -59,4 +51,35 @@
       <text>评论: 说了理论上来说累死了</text>
     </view>
   </view>
+</view> -->
+
+<view  class='flex table-header'>
+  <text style='width: 35px; text-align:center'>排名</text>
+  <text style='width: 200px; padding-left: 40px'>用户名</text>
+  <text>参赛次数</text>
 </view>
+
+<block wx:for="{{ users }}">
+      <view class="flex content">
+        <view style='width: 35px; text-align:center; line-height: 50px'>{{ index +1 }}</view>
+        <view class='flex-inner' style='width: 260px'>
+          <image class="userinfo-avatar" src='{{ item.avatar }}'></image>
+          <view style='line-height: 50px'>{{ item.nickname}}</view>
+        </view>
+        <view style='line-height: 50px'>{{ item.posts_count }}</view>
+      </view>
+      <view class='line'></view>
+</block>
+
+    <view class="bottom" style="width:100%;height:60px;background-color:#f0f0f0;position:fixed; bottom:0;">
+     <view class="flex footer">
+        <view style='width: 40px; text-align:center; line-height: 50px'>3</view>
+        <view class='flex-inner' style='width: 200px'>
+          <image class="userinfo-avatar" src='{{ userInfo.avatarUrl }}'></image>
+          <view style='line-height: 60px'>Rachel</view>
+        </view>
+        <view>
+          <button class='invite' open-type="share">邀请好友</button>
+        </view>
+      </view>
+    </view>

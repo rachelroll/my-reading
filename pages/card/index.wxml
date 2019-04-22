@@ -1,10 +1,12 @@
-<!-- <view>{{time}}</view> -->
+<!-- <view>{{time}}</view>
 
 <view>{{ book_name }}</view>
 
 <view>{{ userInfo.nickName }}</view>
 <view>{{ userInfo.avatar }}</view>
-
+<view>
+  <!-- <image src='{{ qrcode }}'></image> -->
+<!-- </view>
 <view>
     <canvas style="width:100%;height:{{contentHeight}}px" canvas-id="myCanvas"></canvas>
     <view class="edit-footer">
@@ -12,4 +14,13 @@
           保存图片
         </button>
     </view>
-</view>
+</view> -->
+
+
+<!--index.wxml-->
+<!-- <poster id="poster" hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+    <button>生成海报</button>
+</poster> -->
+
+
+

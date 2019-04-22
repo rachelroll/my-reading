@@ -20,7 +20,7 @@ var login = function() {
       // console.log(res)
       // 发送 res.code 到后台换取 openId, sessionKey, unionId
       wx.request({
-        url: 'http://127.0.0.1:8001/api/user-info', //接口地址
+        url: 'http://127.0.0.1:8000/api/user-info', //接口地址
         data: { code: res.code },
         header: {
           'content-type': 'application/json' //默认值
@@ -34,7 +34,7 @@ var login = function() {
             data: res.data,
           })
 
-          that.globalData.token = res.data
+          this.globalData.token = res.data
         },
       })
     }

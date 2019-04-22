@@ -8,7 +8,11 @@
     "pages/user/index",
     "pages/offline/index",
     "pages/book_info/index",
-    "pages/card/index"
+    "pages/card/index",
+    "pages/posts/index",
+    "pages/myOnline/index",
+    "pages/myOffline/index",
+    "pages/feedbacks/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",

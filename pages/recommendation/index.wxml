@@ -17,41 +17,37 @@
   </block>
 </swiper>
 
-<view class="category">
-  <button class="btn">推荐</button>
-  <button class="btn">心灵</button>
-  <button class="btn">管理</button>
-  <button class="btn">职场</button>
-  <button class="btn">家庭</button>
-</view>
-
 <view class="title">
-  <text>每日金句</text>
+  <text>好友金句</text>
+  <navigator url='../posts/index'>
+    <text class='more'>查看更多</text>
+  </navigator>
+  
 </view>
-
 <view class='line'></view>
-
-<block wx:for="{{ posts }}" wx:for-item="post">
-  <view class="card">
+<view class="card">
     <view class='card-left'>
       <view class='img-cover'>
-        <image src='{{ post.cover }}' mode='aspectFill'></image>
+        <image src='{{ posts[0].cover }}' mode='aspectFill'></image>
       </view>
     </view>
     <view class='card-right'>
-      <text class="book-name">书名: {{ post.book_name}}</text>
-      <text class="comments">好友评语: {{ post.content }}</text>
+      <text class="book-name">书名: {{ posts[0].book_name}}</text>
+      <text class="comments">好友评语: {{ strCut.Sub(posts[0].content) }}</text>
       <view class="tab-row">
-        <button class="tab-btn">点赞</button>
-        <button class="tab-btn">转发</button>
+        <button class="tab-btn" data-id="{{ post[0].id }}" bindtap='like'>点赞</button>
+        <button class="tab-btn" open-type="share">转发</button>
         <button class="tab-btn">评论</button>
       </view>
     </view>
   </view>
-</block>
+
+<view class='line'></view>
+
+
 
 <view class="title">
-  <text>好书推荐</text>
+  <text>好书专栏</text>
 </view>
 
 <view class='line'></view>

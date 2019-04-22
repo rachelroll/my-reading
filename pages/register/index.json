@@ -2,5 +2,8 @@
   "backgroundTextStyle": "dark",
   "navigationBarBackgroundColor": "#5b7257",
   "navigationBarTitleText": "我要报名",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "poster": "../../wxa-plugin-canvas/poster/index"
+  }
 }

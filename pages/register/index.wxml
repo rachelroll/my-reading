@@ -47,7 +47,16 @@
                </view>
            </view>
 
-  <div class="weui-btn">
+  <!-- <div class="weui-btn">
       <button id="submit" formType="submit">生成报名卡</button>
-  </div>
+  </div> -->
+
+  <!-- <poster class="weui-btn" id="poster" hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+    <button id="submit" formType="submit">生成报名卡</button>
+</poster> -->
+
+<poster id="poster" hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+    <button>生成海报</button>
+</poster>
+
 </form>

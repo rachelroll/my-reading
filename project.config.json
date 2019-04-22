@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 8,
 			"list": [
 				{
 					"id": 0,
@@ -85,6 +85,21 @@
 					"id": -1,
 					"name": "读书卡页面",
 					"pathName": "pages/card/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "书评列表",
+					"pathName": "pages/posts/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的线上",
+					"pathName": "pages/myOnline/index",
+					"query": "",
 					"scene": null
 				}
 			]

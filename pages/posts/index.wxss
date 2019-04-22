@@ -51,15 +51,15 @@ border-top:1px #5b7257 solid;
 
 .card {
   display: flex;
-  flex-flow: row nowrap;
+  /* flex-flow: row nowrap; */
   justify-content: flex-start;
   margin: 14px;
 }
 
 .card-left {
-  width: 180px;
+  width: 130px;
   height: 120px;
-  overflow: hidden;
+  margin-right: 10px;
   border-radius: 5px;
   padding: 4px;
 }
@@ -78,6 +78,7 @@ border-top:1px #5b7257 solid;
 
 .card-right {
   padding-right: 10px;
+  padding-top: 18px;
 }
 
 .comments  {

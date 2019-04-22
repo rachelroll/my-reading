@@ -56,7 +56,7 @@ Page({
 
     // 请求书评列表
     wx.request({
-      url: "http://127.0.0.1:8001/api/posts",
+      url: "http://127.0.0.1:8000/api/posts",
       
       success: function (res) {
         console.log(res.data.data[0].cover)
@@ -64,6 +64,11 @@ Page({
           'posts': res.data.data
         });
         app.globalData.posts = res.data.data
+
+        wx.setStorage({
+          key: 'posts',
+          data: res.data.data,
+        })
       },
       fail: function (err) {
         console.log(err)
@@ -83,7 +88,7 @@ Page({
 
         // 请求用户表
         wx.request({
-          url: "http://127.0.0.1:8001/api/user",
+          url: "http://127.0.0.1:8000/api/user",
 
           data: {
             'token': that.data.token
@@ -114,7 +119,7 @@ Page({
   //       // console.log(res)
   //       // 发送 res.code 到后台换取 openId, sessionKey, unionId
   //       wx.request({
-  //         url: 'http://127.0.0.1:8001/api/user-info', //接口地址
+  //         url: 'http://127.0.0.1:8000/api/user-info', //接口地址
   //         data: { code: res.code },
   //         header: {
   //           'content-type': 'application/json' //默认值
