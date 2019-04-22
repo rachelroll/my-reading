@@ -21,17 +21,29 @@ Page({
   onLoad: function (options) {
     var that = this;
 
-    // 书评列表
     wx.getStorage({
-      key: 'posts',
-      success: function (res) {
+      key: 'token',
+      success: function(res) {
         console.log(res.data)
-
-        that.setData({
-          posts: res.data
-        })
+        // 我的书评列表
+        wx.request({
+          url: "http://127.0.0.1:8000/api/my-posts",
+          data: {
+            'token': res.data
+          },
+          success: function (res) {
+            console.log(res.data);
+            that.setData({
+              'posts': res.data.data
+            })
+          },
+          fail: function (err) {
+            console.log(err)
+          }
+        })   
       },
     })
+   
   },
 
   // 点赞

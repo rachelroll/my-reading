@@ -6,12 +6,10 @@
       </view>
     </view>
     <view class='card-right'>
-      <text class="book-name">《{{ post.book_name}}》</text>
-      <text class="comments">{{ post.summary }}</text>
-      <view class="tab-row">
-        <button class="tab-btn" data-id="{{ post.id }}" bindtap='like'>点赞</button>
-        <button class="tab-btn" open-type="share">转发</button>
-        <button class="tab-btn" bindtap='comment'>评论</button>
+      <text class="book-name">《{{ post.book_name }}》</text>
+      <text class="comments">书评: {{ post.summary }}</text>
+      <view class="tab-row cu-item">
+        <text class="icon-favorfil lg text-gray"></text>
       </view>
     </view>
   </view>

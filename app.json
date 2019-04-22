@@ -1,10 +1,10 @@
 {
   "pages": [
-
+    "pages/index/index",
     "pages/offline/form",
 
     "pages/offline/index",
-    "pages/index/index",
+    
 
     "pages/logs/logs",
     "pages/register/index",
@@ -21,7 +21,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#5b7257",
-    "navigationBarTitleText": "读书争霸赛",
+    "navigationBarTitleText": "佳禾读书争霸赛",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json"
