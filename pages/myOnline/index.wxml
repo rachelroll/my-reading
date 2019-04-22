@@ -1,16 +1,31 @@
-<block wx:for="{{ posts }}" wx:for-item="post">
-  <view class="card">
-    <view class='card-left'>
-      <view class='img-cover'>
-        <image src='{{ post.cover }}' mode='aspectFill'></image>
+<view class="page">
+<view class="cu-card article {{isCard?'no-card':''}}">
+  <block wx:for="{{ posts }}" wx:for-item="post">
+  <view class="cu-item shadow">
+   <navigator url='../post_show/index?id={{ post.id }}'>
+    <view class="title">
+      <view class="text-cut">《{{ post.book_name }}》</view>
+    </view>
+     </navigator>
+      <navigator url='../post_show/index?id={{ post.id }}'>
+    <view class="content">
+      <image src="{{ post.cover }}" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content">{{ post.content }}</view>
+        <view>
+          <!-- <view class="cu-tag bg-red light sm round">{{ post.likes }}</view>
+          <view class="cu-tag bg-green light sm round">{{ post.comments_count </view> -->
+
+          <view>
+              <text class="icon-appreciatefill text-red">{{ post.likes }}</text>
+              <text class="icon-messagefill text-gray margin-left-sm">{{ post.comments_count }}</text>
+            </view>
+            
+        </view>
       </view>
     </view>
-    <view class='card-right'>
-      <text class="book-name">《{{ post.book_name }}》</text>
-      <text class="comments">书评: {{ post.summary }}</text>
-      <view class="tab-row cu-item">
-        <text class="icon-favorfil lg text-gray"></text>
-      </view>
-    </view>
+     </navigator>
   </view>
-</block>
+  </block>
+</view>
+</view>

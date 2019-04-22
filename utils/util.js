@@ -42,7 +42,7 @@ var login = function() {
             data: res.data,
           })
 
-          this.globalData.token = res.data
+          // this.globalData.token = res.data
         },
       })
     }

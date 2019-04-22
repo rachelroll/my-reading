@@ -1,18 +1,55 @@
-<block wx:for="{{ posts }}" wx:for-item="post">
-  <view class="card">
-    <view class='card-left'>
-      <view class='img-cover'>
-        <image src='{{ post.cover }}' mode='aspectFill'></image>
+<!--<view class='page'>-->
+<!--  <block wx:for="{{ posts }}" wx:for-item="post">-->
+<!--  <view class="card">-->
+<!--    <view class='card-left'>-->
+<!--      <view class='img-cover'>-->
+<!--        <image src='{{ post.cover }}' mode='aspectFill'></image>-->
+<!--      </view>-->
+<!--    </view>-->
+<!--    <view class='card-right'>-->
+<!--      <text class="book-name">书名: {{ post.book_name}}</text>-->
+<!--      <text class="comments">好友评语: {{ post.summary }}</text>-->
+<!--      <view class="tab-row">-->
+<!--        <button class="tab-btn" data-id="{{ post.id }}" bindtap='like'>点赞</button>-->
+<!--        <button class="tab-btn" open-type="share">转发</button>-->
+<!--        <button class="tab-btn" bindtap='comment'>评论</button>-->
+<!--      </view>-->
+<!--    </view>-->
+<!--  </view>-->
+<!--</block>-->
+<!--</view>-->
+
+<view class="page">
+  <view class="cu-card article {{isCard?'no-card':''}}">
+    <block wx:for="{{ posts }}" wx:for-item="post">
+      <view class="cu-item shadow">
+        <navigator url='../post_show/index?id={{ post.id }}'>
+          <view class="title">
+            <view class="text-cut">《{{ post.book_name }}》</view>
+          </view>
+        </navigator>
+<!--        <navigator url='../post_show/index?id={{ post.id }}'>-->
+          <view class="content">
+            <image src="{{ post.cover }}" mode="aspectFill"></image>
+            <view class="desc">
+              <view class="text-content">{{ post.content }}</view>
+              <view>
+                <view>
+                  <view class="tab-row">
+                    <button class="tab-btn" data-id="{{ post.id }}" bindtap='like'>点赞</button>
+                    <button class="tab-btn" open-type="share">转发</button>
+<!--                    <button class="tab-btn" bindtap='comment'>评论</button>-->
+                  </view>
+<!--                  <text class="icon-appreciatefill text-red">{{ post.likes }}</text>-->
+
+<!--                  <text class="icon-messagefill text-gray margin-left-sm">{{ post.comments_count }}</text>-->
+
+                </view>
+              </view>
+            </view>
+          </view>
+<!--        </navigator>-->
       </view>
-    </view>
-    <view class='card-right'>
-      <text class="book-name">书名: {{ post.book_name}}</text>
-      <text class="comments">好友评语: {{ post.summary }}</text>
-      <view class="tab-row">
-        <button class="tab-btn" data-id="{{ post.id }}" bindtap='like'>点赞</button>
-        <button class="tab-btn" open-type="share">转发</button>
-        <button class="tab-btn" bindtap='comment'>评论</button>
-      </view>
-    </view>
+    </block>
   </view>
-</block>
+</view>

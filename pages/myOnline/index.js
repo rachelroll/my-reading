@@ -2,20 +2,11 @@
 //获取应用实例
 const app = getApp()
 
+var _js = require("../../utils/util.js");
+
 Page({
   data: {
-    images: [
-      '../resources/good1.jpg',
-      '../resources/good2.jpg',
-    ],
-
     posts: [],
-  },
-
-  cutComments() {
-    this.setData({
-      comments: comments.substring(0, 50)
-    })
   },
 
   onLoad: function (options) {
@@ -32,10 +23,15 @@ Page({
             'token': res.data
           },
           success: function (res) {
-            console.log(res.data);
-            that.setData({
-              'posts': res.data.data
-            })
+            if (res.data.code == 202) {
+              console.log('here it is')
+              _js.login();
+            } else {
+              console.log(res)
+              that.setData({
+                'posts': res.data.data
+              })
+            }
           },
           fail: function (err) {
             console.log(err)

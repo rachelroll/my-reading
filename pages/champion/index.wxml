@@ -14,68 +14,41 @@
   </block>
 </swiper>
 
-<!-- <view class="champion-card">
-  <view>年冠军</view>
-  <view class='champion-info'>
-    <view class='champion-img'>
-      <image src='../resources/user.png' style="width: 50px; height: 50px" mode='aspectFit'></image>
+<view class="cu-bar bg-white solid-bottom margin-top ">
+    <view class="action flex" >
+        <!-- <text class="icon-title text-orange"></text> -->
+        <text style='display: block'>冠军排行</text>
     </view>
-    <view class='champion-details'>
-      <text>姓名: 刘哈哈</text>
-      <text>评论: 说了理论上来说累死了</text>
-    </view>
-  </view>
 </view>
+<view class="cu-list menu-avatar">
+    <block wx:for="{{ posts }}">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{ item.avatar }});"></view>
+        <navigator>
 
-<view class="champion-card">
-  <view>月冠军</view>
-  <view class='champion-info'>
-    <view class='champion-img'>
-      <image src='../resources/user.png' style="width: 50px; height: 50px" mode='aspectFit'></image>
-    </view>
-    <view class='champion-details'>
-      <text>姓名: 刘哈哈</text>
-      <text>评论: 说了理论上来说累死了</text>
-    </view>
-  </view>
-</view>
-
-<view class="champion-card">
-  <view>周冠军</view>
-  <view class='champion-info'>
-    <view class='champion-img'>
-      <image src='../resources/user.png' style="width: 50px; height: 50px" mode='aspectFit'></image>
-    </view>
-    <view class='champion-details'>
-      <text>姓名: 刘哈哈</text>
-      <text>评论: 说了理论上来说累死了</text>
-    </view>
-  </view>
-</view> -->
-
-<view  class='flex table-header'>
-  <text style='width: 35px; text-align:center'>排名</text>
-  <text style='width: 200px; padding-left: 40px'>用户名</text>
-  <text>参赛次数</text>
-</view>
-
-<block wx:for="{{ users }}">
-      <view class="flex content">
-        <view style='width: 35px; text-align:center; line-height: 50px'>{{ index +1 }}</view>
-        <view class='flex-inner' style='width: 260px'>
-          <image class="userinfo-avatar" src='{{ item.avatar }}'></image>
-          <view style='line-height: 50px'>{{ item.nickname}}</view>
+        </navigator>
+        <view class="content">
+            <view class="text-darkgrey">{{ item.user_nickname}}</view>
+            <navigator url='../post_show/index?id={{ item.id }}'>
+              <view class="text-gray text-sm flex">
+                <text class="text-cut">
+                    <text class="margin-right-xs"></text>评论的 《 {{item.book_name}}》
+                </text>
+            </view>
+            </navigator>
+            
         </view>
-        <view style='line-height: 50px'>{{ item.posts_count }}</view>
+        <view class="action">
+            <view class="cu-tag round bg-orange lg" style="background-color: #5b7257">{{item.likes}}</view>
+        </view>
       </view>
-      <view class='line'></view>
-</block>
+    </block>
+</view>
 
     <view class="bottom" style="width:100%;height:60px;background-color:#f0f0f0;position:fixed; bottom:0;">
      <view class="flex footer">
-        <view style='width: 40px; text-align:center; line-height: 50px'>3</view>
-        <view class='flex-inner' style='width: 200px'>
-          <image class="userinfo-avatar" src='{{ userInfo.avatarUrl }}'></image>
+        <view class='flex-inner' style='width: 500rpx'>
+          <image class="userinfo-avatar" style='width: 80rpx; height: 80rpx' src='{{ userInfo.avatarUrl }}'></image>
           <view style='line-height: 60px'>Rachel</view>
         </view>
         <view>

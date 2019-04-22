@@ -1,0 +1,69 @@
+<view class='page'>
+<view class="cu-card dynamic {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{ post.avatar }});"></view>
+        <view class="content flex-sub">
+          <view>{{ post.user_nickname }} 《{{ post.book_name }}》</view>
+          <view class="text-gray text-sm flex justify-between">
+            {{ post.time }}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content">
+      {{ post.content }}
+    </view>
+    <view class="grid flex-sub padding-lr {{isCard?'col-3 grid-square':'col-1'}}">
+      <view class="bg-img {{isCard?'':'only-img'}}" style="background-image:url({{ post.cover }});" wx:for="{{isCard?9:1}}" wx:key="{{index}}">
+      </view>
+    </view>
+    <view class="text-gray text-sm text-right padding">
+      <text class="icon-appreciatefill margin-lr-xs"></text> {{ post.likes }}
+      <text class="icon-messagefill margin-lr-xs"></text> {{ post.comments_count}}
+    </view>
+
+    <block wx:if="{{ comments != [] }}">
+      <view class="cu-list menu-avatar comment solids-top">
+      <block wx:for="{{ comments }}">
+        <view class="cu-item">
+        <view class="cu-avatar round" style="background-image:url({{ item.user_avatar }});"></view>
+        <view class="content">
+          <view class="text-grey">{{ item.user_nickname }}</view>
+          <view class="text-gray text-content text-df">
+            {{ item.content }}
+          </view>
+          <view class="margin-top-sm flex justify-between">
+            <view class="text-gray text-df">{{ item.time }}</view>
+          </view>
+        </view>
+      </view>
+      </block>
+    </view>
+    </block>
+    <block wx:elif="{{ comments == [] }}">
+      <view class="text-gray text-content text-df solids-top">
+        <view>
+          尚无评论, 快来评论吧~~~
+        </view>
+      </view>
+    </block>
+    </view>
+  </view>
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='cu-card cu-item shadow'>
+      <view class="cu-form-group margin-top cu-list comment solids-top">
+        <textarea maxlength="-1"  class="{{textareaAValue?'value':''}}" name="comment"></textarea>
+      </view>
+      <input hidden='true' type="text" name="id" value='{{ post.id }}' />
+
+          <view class="padding flex flex-direction">
+            <button class="cu-btn bg-grey lg" style="background-color: #5b7257" form-type="submit">
+              提交评论                 
+            </button>
+          </view>
+    </view>
+  </form>  
+</view>

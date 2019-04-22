@@ -59,7 +59,7 @@ Page({
       url: "http://127.0.0.1:8000/api/posts",
       
       success: function (res) {
-        console.log(res.data.data[0].cover)
+        // console.log(res.data.data[0].cover)
         that.setData({
           'posts': res.data.data
         });
@@ -102,6 +102,16 @@ Page({
               that.setData({
                 'posts_count': res.data.data.posts_count,
                 'age': res.data.data.age
+              });
+
+              wx.setStorage({
+                key: 'age',
+                data: res.data.data.age,
+              });
+
+              wx.setStorage({
+                key: 'posts_count',
+                data: res.data.data.posts_count,
               })
             }
           },

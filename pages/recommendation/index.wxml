@@ -22,29 +22,51 @@
   <navigator url='../posts/index'>
     <text class='more'>查看更多</text>
   </navigator>
-  
 </view>
-<view class='line'></view>
-<view class="card">
-    <view class='card-left'>
-      <view class='img-cover'>
-        <image src='{{ posts[0].cover }}' mode='aspectFill'></image>
+<!--<view class='line'></view>-->
+<!--<view class="card">-->
+<!--    <view class='card-left'>-->
+<!--      <view class='img-cover'>-->
+<!--        <image src='{{ posts[0].cover }}' mode='aspectFill'></image>-->
+<!--      </view>-->
+<!--    </view>-->
+<!--    <view class='card-right'>-->
+<!--      <text class="book-name">书名: {{ posts[0].book_name}}</text>-->
+<!--      <text class="comments">好友评语: {{ strCut.Sub(posts[0].content) }}</text>-->
+<!--      <view class="tab-row">-->
+<!--        <button class="tab-btn" data-id="{{ post[0].id }}" bindtap='like'>点赞</button>-->
+<!--        <button class="tab-btn" open-type="share">转发</button>-->
+<!--        <button class="tab-btn">评论</button>-->
+<!--      </view>-->
+<!--    </view>-->
+<!--  </view>-->
+<view class="page">
+  <view class="cu-card article {{isCard?'no-card':''}}">
+      <view class="cu-item shadow">
+        <navigator url='../post_show/index?id={{ posts[0].id }}'>
+          <view class="title">
+            <view class="text-cut">《{{ posts[0].book_name }}》</view>
+          </view>
+        </navigator>
+        <navigator url='../post_show/index?id={{ posts[0].id }}'>
+          <view class="content">
+            <image src="{{ posts[0].cover }}" mode="aspectFill"></image>
+            <view class="desc">
+              <view class="text-content">{{ posts[0].content }}</view>
+              <view>
+                <view>
+                  <text class="icon-appreciatefill text-red"> {{ posts[0].likes }}</text>
+                  <text class="icon-messagefill text-gray margin-left-sm"> {{ posts[0].comments_count }}</text>
+                </view>
+
+              </view>
+            </view>
+          </view>
+        </navigator>
       </view>
-    </view>
-    <view class='card-right'>
-      <text class="book-name">书名: {{ posts[0].book_name}}</text>
-      <text class="comments">好友评语: {{ strCut.Sub(posts[0].content) }}</text>
-      <view class="tab-row">
-        <button class="tab-btn" data-id="{{ post[0].id }}" bindtap='like'>点赞</button>
-        <button class="tab-btn" open-type="share">转发</button>
-        <button class="tab-btn">评论</button>
-      </view>
-    </view>
   </view>
-
-<view class='line'></view>
-
-
+</view>
+<!--<view class='line'></view>-->
 
 <view class="title">
   <text>好书专栏</text>

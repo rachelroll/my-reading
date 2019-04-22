@@ -3,9 +3,9 @@ Page({
     images: [
       '../resources/good1.jpg',
       '../resources/good2.jpg'
-    ], 
+    ],
     userInfo: {},
-    users:[]
+    posts:[]
   },
 
   onLoad:function() {
@@ -18,13 +18,15 @@ Page({
           userInfo: res.data
         })
       }
-    })
+    });
 
     wx.request({
-      url: 'http://127.0.0.1:8000/api/users',
+      url: 'http://127.0.0.1:8000/api/posts',
       success: function (res) {
+
+        console.log(res.data.data)
         that.setData({
-          'users': res.data.data
+          'posts': res.data.data
         });
       },
       fail: function (err) {
@@ -36,7 +38,7 @@ Page({
     // wx.showShareMenu({
     //   // 要求小程序返回分享目标信息
     //   withShareTicket: true
-    // }); 
+    // });
   },
 
   onShareAppMessage: function(res) {

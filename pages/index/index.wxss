@@ -71,9 +71,7 @@
 
 .card-item {
   /* border: 5px solid black; */
-  height: 120px;
-  overflow: hidden;
-  margin: 0 10px;
+  margin: 0 20rpx;
   border-radius: 5px;
   position: relative;
 }

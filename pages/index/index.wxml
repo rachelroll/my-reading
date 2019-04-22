@@ -1,6 +1,6 @@
 <!--index.wxml-->
-  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="confirm-btn" bindtap='login'> 
-    确认授权登录 
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="confirm-btn" bindtap='login'>
+    确认授权登录
   </button>
 
     <block wx:else>
@@ -48,40 +48,37 @@
   <view class="cards">
     <view class="card-item">
       <navigator url="../register/index" hover-class="navigator-hover">
-        <image src="../resources/008.jpg" ></image>
-        <div class="placeholder">我要报名</div>
+        <image style="border-radius: 10rpx;" src="../resources/register@2x.png" mode="widthFix"></image>
       </navigator>
     </view>
-    <view class="card-item">
-      <navigator url="../recommendation/index">
-        <image src="../resources/008.jpg" mode="bottom left"></image>
-        <div class="placeholder">好友金句</div>
-      </navigator>
-    </view>
-  </view>
-  <view class="cards">
-        <view class="card-item">
-          <navigator url='../champion/index'>
-            <image src="../resources/008.jpg" mode="bottom right"></image>
-            <div class="placeholder">冠军排行</div>
-          </navigator>
-        </view>
-        <view class="card-item">
-          <navigator url='../user/index'>
-            <image src="../resources/008.jpg" mode="center"></image>
-          <div class="placeholder">我的主页</div>
-          </navigator>
-        </view>
-  </view>
 
-<view class="cards">
-  <view class="card-item">
-    <navigator url='../offline/index'>
-      <image src="../resources/008.jpg" mode='widthFix'  style='height:20em; width:30em'></image>
-    <div class="placeholder" style="left: 130px">线下读书会</div>
-    </navigator>
+    <view class="card-item">
+      <navigator url="../recommendation/index" hover-class="navigator-hover">
+        <image style="border-radius: 10rpx;" src="../resources/share@2x.png" mode="widthFix"></image>
+      </navigator>
+    </view>
   </view>
-</view>
+      <view class="cards">
+        <view class="card-item">
+          <navigator url="../champion/index" hover-class="navigator-hover">
+            <image style="border-radius: 10rpx;" src="../resources/champion@2x.png" mode="widthFix"></image>
+          </navigator>
+        </view>
+
+        <view class="card-item">
+          <navigator url="../user/index" hover-class="navigator-hover">
+            <image style="border-radius: 10rpx;" src="../resources/home@2x.png" mode="widthFix"></image>
+          </navigator>
+        </view>
+      </view>
+
+      <view class="cards">
+        <view class="card-item">
+          <navigator url="../offline/index" hover-class="navigator-hover">
+            <image style="border-radius: 10rpx; width: 670rpx;" src="../resources/offline@2x.png" mode="widthFix"></image>
+          </navigator>
+        </view>
+      </view>
 </block>
 
 

@@ -16,7 +16,8 @@
     "pages/posts/index",
     "pages/myOnline/index",
     "pages/myOffline/index",
-    "pages/feedbacks/index"
+    "pages/feedbacks/index",
+    "pages/post_show/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",

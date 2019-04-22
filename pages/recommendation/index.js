@@ -72,13 +72,6 @@ Page({
     })
 
     // 书评列表
-    // console.log(app.globalData.posts)
-    // this.setData({
-    //   posts: app.globalData.posts
-    // })
-
-    // console.log(this.data.posts)
-
     wx.getStorage({
       key: 'posts',
       success: function(res) {
