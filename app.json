@@ -1,12 +1,16 @@
 {
   "pages": [
+
+    "pages/offline/form",
+
+    "pages/offline/index",
     "pages/index/index",
+
     "pages/logs/logs",
     "pages/register/index",
     "pages/recommendation/index",
     "pages/champion/index",
     "pages/user/index",
-    "pages/offline/index",
     "pages/book_info/index",
     "pages/card/index",
     "pages/posts/index",
@@ -19,5 +23,6 @@
     "navigationBarBackgroundColor": "#5b7257",
     "navigationBarTitleText": "读书争霸赛",
     "navigationBarTextStyle": "white"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
