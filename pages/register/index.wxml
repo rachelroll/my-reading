@@ -1,62 +1,52 @@
 <!--index.wxml-->
 <!-- <div class="part-line">书籍资料填写</div> -->
-<form bindsubmit="formSubmit" bindreset="formReset">
-  <div class="weui-cells weui-cells_form">
-    <div class="weui-cell flex">
-        <!-- <div class="weui-cell__hd"> -->
-        <label class="weui-label">书名</label>
-        <input class="weui-input" type="text" name="book_name" />
-        <!-- </div> -->
-    </div>
-    <div class="weui-cell flex">
-        <!-- <div class="weui-cell__hd"> -->
-        <label class="weui-label">介绍</label>
-        <input class="weui-input" type="text" name="descripton"/>
-        <!-- </div> -->
-    </div>
-    <div class="weui-cell">
-        <div class="weui-cell__bd">
-        <label class="weui-label comment">书评</label>
-        <textarea class="weui-textarea" placeholder="请分享你对这本书的评价" rows="3" name="post_content"></textarea>
-            <div class="weui-textarea-counter"><span>0</span>/200</div>
-        </div>
-    </div>
-  </div>
-           <view class="weui-cell">
-               <view class="weui-cell__bd">
-                   <view class="weui-uploader">
-                       <view class="weui-uploader__hd">
-                           <view class="weui-uploader__title">图片上传</view>
-                           <view class="weui-uploader__info">{{images.length}}/1</view>
-                       </view>
-                       <view class="weui-uploader__bd">
-                           <view class="weui-uploader__files" id="uploaderFiles" name="cover">
-                               <block wx:for="{{images}}" wx:key="*this">
-                                   <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
-                                       <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
-                                   </view>
-                               </block>
-                           </view>
-                           <block wx:if="{{images.length != 1}}">
+<view class="page">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="cu-form-group margin-top">
+        <view class="title">书名</view>
+        <input placeholder="请填写书名  (必填)" name="book_name" ></input>
+    </view>
+    <view class="cu-form-group">
+        <view class="title">介绍</view>
+        <input placeholder="请用一句话介绍这本书" name="descripton"></input>
+    </view>
+
+    <!-- 文本框 -->
+        <view class="cu-form-group top">
+            <view class="title">书评</view>
+            <textarea name='post_content' maxlength="-1" disabled="{{modalName!=null}}" placeholder="请填写书评 (必填)"  bindinput="textareaBInput" rows="30" style='height: 440rpx'></textarea>
+        </view>
+
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <view class="weui-uploader">
+                    <view class="weui-uploader__hd">
+                        <view class="weui-uploader__title">请上传一张封面图</view>
+                        <view class="weui-uploader__info">{{images.length}}/1</view>
+                    </view>
+                    <view class="weui-uploader__bd">
+                        <view class="weui-uploader__files" id="uploaderFiles" name="cover">
+                            <block wx:for="{{images}}" wx:key="*this">
+                                <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                                </view>
+                            </block>
+                        </view>
+                        <block wx:if="{{images.length != 1}}">
                             <view class="weui-uploader__input-box">
-                               <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                                <view class="weui-uploader__input" bindtap="chooseImage"></view>
                             </view>
-                           </block>
-                       </view>
-                   </view>
-               </view>
-           </view>
-
-  <!-- <div class="weui-btn">
-      <button id="submit" formType="submit">生成报名卡</button>
-  </div> -->
-
-  <!-- <poster class="weui-btn" id="poster" hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
-    <button id="submit" formType="submit">生成报名卡</button>
-</poster> -->
-
-<poster id="poster" hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
-    <button>生成海报</button>
-</poster>
-
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    <view class="padding flex flex-direction">
+        <button class="cu-btn bg-grey lg" style="background-color: #639764">生成报名卡</button>
+    </view>
 </form>
+</view>
+
+
+
+

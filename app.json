@@ -4,7 +4,7 @@
     "pages/offline/form",
 
     "pages/offline/index",
-    
+
 
     "pages/logs/logs",
     "pages/register/index",
@@ -17,11 +17,12 @@
     "pages/myOnline/index",
     "pages/myOffline/index",
     "pages/feedbacks/index",
-    "pages/post_show/index"
+    "pages/post_show/index",
+    "pages/search/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#5b7257",
+    "navigationBarBackgroundColor": "#639764",
     "navigationBarTitleText": "佳禾读书争霸赛",
     "navigationBarTextStyle": "white"
   },

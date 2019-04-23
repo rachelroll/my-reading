@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<view class="page">
   <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="confirm-btn" bindtap='login'>
     确认授权登录
   </button>
@@ -31,19 +32,36 @@
   <block wx:for="{{posts}}" wx:for-item="post">
     <swiper-item>
       <view class="comments">
-        <text>{{ post.user_nickname }} 评论了</text> {{ post.book_name }}
+        <text class="icon-notificationfill lg text-gray" style="color: #639764; margin-right: 10rpx"></text>
+        <text>{{ post.user_nickname }} 评论了</text>
+        <text style='color: #639764'>{{ post.book_name }}</text>
        </view>
     </swiper-item>
   </block>
 </swiper>
 
-  <div class="weui-search-bar" id="search_bar">
-    <form class="weui-search-bar__form">
-        <div class="weui-search-bar__box">
-            <input type="text" class="weui-search-bar__input" id="search_input"  name="search" placeholder="搜索" auto-focus />
-        </div>
-    </form>
-</div>
+<!--  <div class="weui-search-bar" id="search_bar">-->
+<!--    <form class="weui-search-bar__form">-->
+<!--        <div class="weui-search-bar__box">-->
+<!--            <input type="text" class="weui-search-bar__input" id="search_input"  name="search" placeholder="搜索" auto-focus />-->
+<!--        </div>-->
+<!--    </form>-->
+<!--</div>-->
+
+        <view class="cu-bar search bg-white">
+          <navigator url="../search/index">
+          <view class="search-form round">
+            <text class="icon-search"></text>
+            <input type="text" placeholder="搜索" confirm-type="search" name="search"></input>
+          </view>
+          </navigator>
+          <navigator url="../search/index">
+            <view class="action">
+              <button form-type="submit" class="cu-btn bg-green shadow-blur round" style="background-color:#639764">搜索好书 & 书评</button>
+            </view>
+          </navigator>
+        </view>
+
 
   <view class="cards">
     <view class="card-item">
@@ -79,7 +97,8 @@
           </navigator>
         </view>
       </view>
-</block>
+  </block>
+</view>
 
 
 

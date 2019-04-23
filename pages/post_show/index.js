@@ -4,7 +4,9 @@ const app = getApp()
 
 Page({
   data: {
-    post:'',
+    post:{},
+    likes: 0,
+    id: 0,
     comments:[]
   },
 
@@ -21,15 +23,14 @@ Page({
         'id': options.id
       },
       success: function (res) {
-        if (res.data.code == 202) {
-          console.log('here it is')
-          _js.login();
-        } else {
           console.log(res)
           that.setData({
-            'post': res.data.data
+            'post': res.data.data,
+            'likes': res.data.data.likes,
+            'id': res.data.data.id
           })
-        }
+
+          console.log(that.data.id)
       },
       fail: function (err) {
         console.log(err)
@@ -134,5 +135,28 @@ Page({
         },
       })
     }
+  },
+
+  // 点赞
+  like: function (event) {
+    var that = this;
+    console.log(event)
+    wx.request({
+      url: "http://127.0.0.1:8000/api/post/like",
+
+      data: {
+        'id': event.currentTarget.dataset.postId,
+      },
+      method: 'POST',
+      success: function (res) {
+          console.log(res)
+          that.setData({
+            likes: that.data.likes+1
+          })
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })
   },
 })

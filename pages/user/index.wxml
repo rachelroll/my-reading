@@ -31,29 +31,21 @@
 </view>
 
 <view class='line'></view>
-<navigator url='../myOnline/index'>
-  <view class='title'>
-    <view>我的线上</view>
-    <view>></view>
+
+ <navigator url='../myOnline/index'>
+  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      <text class="icon-title text-green"></text>
+      <text>我的线上</text>
+    </view>
   </view>
-</navigator>
+ </navigator>
 
-<view class='slim-line'></view>
-
-<navigator url='../myOffline/index'>
-  <view class='title'>
-    <view>我的线下</view>
-    <view>></view>
+ <navigator url='../myOffline/index'>
+  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      <text class="icon-title text-green"></text>
+      <text>我的线下</text>
+    </view>
   </view>
-</navigator>
-
-<view class='slim-line'></view>
-
-<navigator url='../feedbacks/index'>
-  <view class='title'>
-    <view>问题反馈</view>
-    <view>></view>
-  </view>
-</navigator>
-
-<view class='slim-line'></view>
+ </navigator>

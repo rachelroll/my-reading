@@ -1,8 +1,8 @@
 Page({
   data: {
     images: [
-      '../resources/good1.jpg',
-      '../resources/good2.jpg'
+      '../resources/banner1@2x.png',
+      '../resources/banner2@2x.png'
     ],
     userInfo: {},
     posts:[]

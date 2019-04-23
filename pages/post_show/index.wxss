@@ -1,9 +1,14 @@
 .line{
 width: 100%;
 margin-top: 20rpx;
-border-top:1px #5b7257 solid;
+border-top:1px #639764 solid;
 }
 
 .header {
   padding: 30rpx;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-end;
 }

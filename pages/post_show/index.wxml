@@ -19,8 +19,11 @@
       <view class="bg-img {{isCard?'':'only-img'}}" style="background-image:url({{ post.cover }});" wx:for="{{isCard?9:1}}" wx:key="{{index}}">
       </view>
     </view>
-    <view class="text-gray text-sm text-right padding">
-      <text class="icon-appreciatefill margin-lr-xs"></text> {{ post.likes }}
+    <view class="text-gray text-sm text-right padding flex">
+      <view data-post-id="{{ post.id }}" bindtap='like'>
+        <text class="icon-appreciatefill text-red margin-lr-xs"></text>
+        <text class="text-red">{{ likes }}</text>
+      </view>
       <text class="icon-messagefill margin-lr-xs"></text> {{ post.comments_count}}
     </view>
 
@@ -60,10 +63,10 @@
       <input hidden='true' type="text" name="id" value='{{ post.id }}' />
 
           <view class="padding flex flex-direction">
-            <button class="cu-btn bg-grey lg" style="background-color: #5b7257" form-type="submit">
-              提交评论                 
+            <button class="cu-btn bg-grey lg" style="background-color: #639764" form-type="submit">
+              提交评论
             </button>
           </view>
     </view>
-  </form>  
+  </form>
 </view>

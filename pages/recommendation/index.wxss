@@ -21,7 +21,7 @@
 
 .btn {
   height: 30px;
-  background-color:#5b7257;
+  background-color:#639764;
   line-height: 30px;
   color: white;
   font-size: 70%;
@@ -46,7 +46,7 @@ justify-content: space-between;
 .line{
 width: 100%;
 margin-top: 20rpx;
-border-top:1px #5b7257 solid;
+border-top:1px #639764 solid;
 }
 
 .card {
@@ -102,7 +102,7 @@ border-top:1px #5b7257 solid;
   height: 20px;
   font-size: 60%;
   line-height: 20px;
-  border: 1px solid #5b7257;
+  border: 1px solid #639764;
   background-color: white;
 }
 

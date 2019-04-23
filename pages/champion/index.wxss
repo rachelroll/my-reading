@@ -5,12 +5,7 @@
   text-align: center;
 }
 
-.top-banner image {
-  display: block;
-  height: 178px;
-  width: 100%;
-  border-radius: 5px;
-}
+
 
 .category {
   display: flex;
@@ -21,7 +16,7 @@
 
 .btn {
   height: 30px;
-  background-color: #5b7257;
+  background-color: #639764;
   line-height: 30px;
   color: white;
   font-size: 70%;
@@ -30,7 +25,7 @@
 .champion-card {
   width: 334px;
   height: 100px;
-  background-color: #5b7257;
+  background-color: #639764;
   border-radius: 5px;
   margin: 18px auto;
   padding: 6px 16px;
@@ -70,7 +65,7 @@
 
 .table-header {
   font-size: 70%;
-  background-color: #5b7257;
+  background-color: #639764;
   color: white;
   height: 36px;
   line-height: 36px;
@@ -93,7 +88,7 @@
 }
 
 .invite {
-  background-color: #5b7257;
+  background-color: #639764;
   border-radius: 20px;
   border: none;
   color: white;
@@ -109,5 +104,5 @@
 .line{
 width: 100%;
 margin-top: 20rpx;
-border-top:1px #5b7257 dashed;
+border-top:1px #639764 dashed;
 }

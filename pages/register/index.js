@@ -174,7 +174,7 @@ const posterConfig = {
 }
 
 //获取应用实例
-const app = getApp()
+const app = getApp();
 
 Page({
 
@@ -210,6 +210,31 @@ Page({
     })
   },
 
+  // ChooseImage() {
+  //   wx.chooseImage({
+  //     count: 4, //默认9
+  //     sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+  //     sourceType: ['album'], //从相册选择
+  //     success: (res) => {
+  //       if (this.data.imgList.length != 0) {
+  //         this.setData({
+  //           imgList: this.data.imgList.concat(res.tempFilePaths)
+  //         })
+  //       } else {
+  //         this.setData({
+  //           imgList: res.tempFilePaths
+  //         })
+  //       }
+  //     }
+  //   });
+  // },
+  // ViewImage(e) {
+  //   wx.previewImage({
+  //     urls: this.data.imgList,
+  //     current: e.currentTarget.dataset.url
+  //   });
+  // },
+
   formSubmit: function (e) {
     var that = this;
     that.data.userInfo = app.globalData.userInfo;
@@ -218,7 +243,7 @@ Page({
         title: '请填写书名!',
         icon: 'loading',
         duration: 1500
-      }) 
+      })
       setTimeout(function () {
         wx.hideToast()
       }, 2000)

@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 11,
 			"list": [
 				{
 					"id": 0,
@@ -108,6 +108,20 @@
 					"id": -1,
 					"name": "书评展示页",
 					"pathName": "pages/post_show/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索页",
+					"pathName": "pages/search/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "报名页",
+					"pathName": "pages/register/index",
 					"query": "",
 					"scene": null
 				}

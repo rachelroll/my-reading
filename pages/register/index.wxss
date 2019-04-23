@@ -1,5 +1,5 @@
 .part-line {
-  background-color: #5b7257;
+  background-color: #639764;
   height: 30px;
   width: 100%;
   display: flex;
@@ -11,11 +11,11 @@
   text-align: center;
 }
 
-.flex {
+/* .flex {
   flex-flow: row nowrap;
   display: flex;
    justify-content: left;
-}
+} */
 
 .comment {
   display: block;
@@ -23,7 +23,7 @@
 }
 
 .weui-btn {
-  background-color: #5b7257;
+  background-color: #639764;
   height: 50px;
   line-height: 50px;
   margin: 40px 20px 40px 20px;

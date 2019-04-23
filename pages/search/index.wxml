@@ -1,0 +1,41 @@
+<view class='page'>
+  <form bindsubmit="formSubmit">
+        <view class="cu-bar search bg-white">
+          <view class="search-form round">
+            <text class="icon-search"></text>
+            <input type="text" placeholder="搜索" confirm-type="search" name="search"></input>
+          </view>
+          <view class="action">
+            <button form-type="submit" class="cu-btn bg-green shadow-blur round" style="background-color:#639764">搜索</button>
+          </view>
+        </view>
+  </form>
+
+  <view class="cu-card article {{isCard?'no-card':''}}">
+    <block wx:for="{{ posts }}" wx:for-item="post">
+      <view class="cu-item shadow">
+        <navigator url='../post_show/index?id={{ post.id }}'>
+          <view class="title">
+            <view class="text-cut">《{{ post.book_name }}》</view>
+          </view>
+          <view class="content">
+          <image src="{{ post.cover }}" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content">{{ post.content }}</view>
+            <view>
+                <view class="cu-capsule"><view class="cu-tag bg-red sm">
+                    <text class="icon-likefill"></text>
+                </view>
+                    <view class="cu-tag line-red sm">
+                        {{ post.likes }}
+                    </view>
+                </view>
+              </view>
+          </view>
+        </view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+</view>
+

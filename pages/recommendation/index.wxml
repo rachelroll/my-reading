@@ -1,6 +1,7 @@
 <!-- 引入 wxs 脚本 -->
 <wxs module="strCut" src="./index.wxs"></wxs>
 
+<view class="page">
 <swiper
   indicator-dots=true
   autoplay=true
@@ -11,7 +12,7 @@
   <block wx:for="{{ images }}">
     <swiper-item>
       <view class="top-banner">
-        <image src="{{ item }}"></image>
+        <image src="{{ item }}" mode="widthFix"></image>
       </view>
     </swiper-item>
   </block>
@@ -23,23 +24,7 @@
     <text class='more'>查看更多</text>
   </navigator>
 </view>
-<!--<view class='line'></view>-->
-<!--<view class="card">-->
-<!--    <view class='card-left'>-->
-<!--      <view class='img-cover'>-->
-<!--        <image src='{{ posts[0].cover }}' mode='aspectFill'></image>-->
-<!--      </view>-->
-<!--    </view>-->
-<!--    <view class='card-right'>-->
-<!--      <text class="book-name">书名: {{ posts[0].book_name}}</text>-->
-<!--      <text class="comments">好友评语: {{ strCut.Sub(posts[0].content) }}</text>-->
-<!--      <view class="tab-row">-->
-<!--        <button class="tab-btn" data-id="{{ post[0].id }}" bindtap='like'>点赞</button>-->
-<!--        <button class="tab-btn" open-type="share">转发</button>-->
-<!--        <button class="tab-btn">评论</button>-->
-<!--      </view>-->
-<!--    </view>-->
-<!--  </view>-->
+
 <view class="page">
   <view class="cu-card article {{isCard?'no-card':''}}">
       <view class="cu-item shadow">
@@ -82,21 +67,25 @@
   <button class="btn" bindtap='bookList' data-variable="6">家庭</button>
 </view>
 
-<block wx:for="{{ books }}" wx:for-item="book">
-  <navigator url="../book_info/index?id={{ book.id }}">
-    <view class="card">
-        <view class='card-left'>
-        <view class='img-cover'>
-          <image src='{{ book.imageUrl }}' mode='aspectFill'></image>
+<view class="cu-card article {{isCard?'no-card':''}}">
+  <block wx:for="{{ books }}" wx:for-item="book">
+    <view class="cu-item shadow" style="padding-top: 30rpx">
+      <navigator url='../book_info/index?id={{ book.id }}'>
+        <view class="content">
+          <image src="{{ book.imageUrl }}" mode="widthFix"></image>
+          <view class="desc">
+            <view class="title">
+              <view class="text-cut">《{{ book.title }}》</view>
+            </view>
+            <view class="text-content">
+              {{ book.summary }}
+            </view>
+          </view>
         </view>
-      </view>
-      <view class='card-right'>
-        <text class="book-name">书名: {{ book.title }}</text>
-        <text class="comments">简介: {{ strCut.Sub(book.summary) }}</text>
-      </view>
+      </navigator>
     </view>
-  </navigator>
-</block>
-
+  </block>
+</view>
+</view>
 
 

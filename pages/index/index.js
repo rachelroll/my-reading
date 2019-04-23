@@ -23,7 +23,7 @@ Page({
     })
   },
 
-  // 页面加载时触发 
+  // 页面加载时触发
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -57,7 +57,7 @@ Page({
     // 请求书评列表
     wx.request({
       url: "http://127.0.0.1:8000/api/posts",
-      
+
       success: function (res) {
         // console.log(res.data.data[0].cover)
         that.setData({
@@ -149,4 +149,4 @@ Page({
   //     }
   //   })
   // }
-})
+});
