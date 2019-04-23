@@ -22,4 +22,5 @@
       <image src='../resources/008.jpg'></image>
     </view>
   </view>
+  <canvas canvas-id="shareCanvas" style="width:600px;height:900px"></canvas>
 </view>
