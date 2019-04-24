@@ -18,7 +18,9 @@
     "pages/myOffline/index",
     "pages/feedbacks/index",
     "pages/post_show/index",
-    "pages/search/index"
+    "pages/search/index",
+    "pages/offline/category",
+    "pages/offline/show"
   ],
   "window": {
     "backgroundTextStyle": "dark",

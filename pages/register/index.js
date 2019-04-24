@@ -298,7 +298,7 @@ Page({
               console.log(res.data);
               // 如果 token 过期, 重新登录
               if (res.data.code == 202) {
-                console.log('here it is')
+                console.log('here it is');
                 _js.login();
               } else {
                 // 关闭当前页面，跳转到生成读书卡页面

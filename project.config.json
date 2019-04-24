@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 14,
 			"list": [
 				{
 					"id": 0,
@@ -122,6 +122,27 @@
 					"id": -1,
 					"name": "报名页",
 					"pathName": "pages/register/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发起读书会表单页",
+					"pathName": "pages/offline/form",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "线下读书会列表页",
+					"pathName": "pages/offline/category",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "线下读书会详情页",
+					"pathName": "pages/offline/show",
 					"query": "",
 					"scene": null
 				}

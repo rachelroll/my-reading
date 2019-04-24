@@ -83,9 +83,6 @@ Page({
           'token': res.data
         })
 
-        console.log(that.data.token)
-        console.log(res.data)
-
         // 请求用户表
         wx.request({
           url: "http://127.0.0.1:8000/api/user",

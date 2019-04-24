@@ -1,0 +1,35 @@
+<view class="page">
+    <view class="cu-card dynamic {{isCard?'no-card':''}}">
+        <view class="cu-item shadow">
+            <view class="cu-list">
+                <view class="cu-item">
+                    <view class="content">
+                        <view  style='text-align: center; margin: 40rpx 0;'>{{ meeting.title }}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="grid flex-sub padding-lr {{isCard?'col-3 grid-square':'col-1'}}" style="padding-bottom: 30rpx">
+                <view class="bg-img" style="background-image:url({{meeting.cover}}); height: 400rpx; border-radius: 10rpx">
+                </view>
+            </view>
+            <view class="cu-list comment solids-top" style="padding: 30rpx">
+                <view class="cu-item">
+                    <view class="content">
+                        <view class="text-gray text-content text-df">
+                            <text style="display:block; margin-bottom: 20rpx">活动名称: {{ meeting.title }}</text>
+                            <text style="display:block; margin-bottom: 20rpx">活动主题: {{ meeting.subject }}</text>
+                            <text style="display:block; margin-bottom: 20rpx">时间: {{ meeting.date }}</text>
+                            <text style="display:block; margin-bottom: 20rpx">地址: {{ meeting.address}}</text>
+                            <block wx:if="meeting.company">
+                                <text style="display:block; margin-bottom: 20rpx">举办方: {{ meeting.company }}</text>
+                            </block>
+                            <text style="display:block; margin-bottom: 20rpx">联系人: {{ meeting.contact }}</text>
+                            <text style="display:block; margin-bottom: 20rpx">联系电话: {{ meeting.phone }}</text>
+                            <text style="display:block; margin-bottom: 20rpx">活动介绍: {{ meeting.description }}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

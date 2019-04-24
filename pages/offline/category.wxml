@@ -1,0 +1,32 @@
+<view class="page">
+    <view class="cu-card case" style="padding: 30rpx">
+        <block wx:for="{{ meetings }}" wx:for-item="meeting">
+            <navigator url="./show?id={{ meeting.id }}">
+                <view class="cu-item shadow" style="margin-bottom: 30rpx">
+                    <view class="image">
+                        <image src="{{ meeting.cover }}" mode="aspectFit" style="border-radius: 10rpx; height: 360rpx"></image>
+                        <view class="cu-tag" style="background-color: #639764; color: white">{{ meeting.subject }}</view>
+                        <view class="cu-bar bg-shadeBottom">
+                            <text class="text-cut">
+                                {{ meeting.description }}
+                            </text>
+                        </view>
+                    </view>
+                    <view class="cu-list" style="padding: 30rpx">
+                        <view class="cu-item">
+                            <view class="content flex-sub">
+                                <view class="text-darkgrey">{{ meeting.title }}</view>
+                                <view class="text-gray text-sm flex justify-between">
+                                    {{ meeting.city }}
+                                    <view class="text-gray text-sm">
+                                        <text>{{ meeting.date }}</text>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </navigator>
+        </block>
+    </view>
+</view>

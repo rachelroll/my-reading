@@ -3,12 +3,13 @@
 }
 
 .meeting_item {
-   height: 140rpx;
-  border:1px solid green;
-  overflow: hidden;
-  border-radius: 5px;
-  margin: 4px;
+  margin: 0 8rpx 8rpx 8rpx;
   }
+
+.meeting-item image {
+    height: 300rpx;
+    border-radius: 10rpx;
+}
 
   .page {
     margin: 8px;

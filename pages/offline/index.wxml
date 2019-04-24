@@ -1,27 +1,42 @@
 <view class='page'>
+  <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" style="height: 100rpx; min-height: 175rpx;">
+    <swiper-item  wx:for="{{ images }}" wx:key>
+      <image src="{{item}}" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
   <navigator url="../offline/form" hover-class="navigator-hover">
-  <button class="cu-btn block line-orange lg margin-bottom-lg">
+  <button class="cu-btn block line-orange lg" style="margin: 20rpx 0; color: #639764">
     <text class="icon-form"></text>我要发起线下读书会...
   </button>
   </navigator>
 
-  <view class='flex title'>
-    <text class='flex-item'>报名中</text>
-    <text class='flex-item more'>查看更多</text>
-  </view>
+<!--  <view class='flex title'>-->
+<!--    <text class='flex-item'>报名中</text>-->
+<!--    <text class='flex-item more'>查看更多</text>-->
+<!--  </view>-->
 
   <view class='meeting flex'>
-    <view class='meeting_item'>
-      <image src='../resources/008.jpg'></image>
+      <view class='meeting_item'>
+        <navigator url="./category?id=1">
+          <image src='../resources/champion 3.png' mode="aspectFit" style="height: 150rpx; border-radius: 10rpx;"></image>
+        </navigator>
+      </view>
 
-    </view>
     <view class='meeting_item'>
-      <image src='../resources/008.jpg'></image>
-    </view>
+      <navigator url="./category?id=2">
+          <image src='../resources/champion 4.png' mode="aspectFit" style="height: 150rpx; border-radius: 10rpx;"></image>
+      </navigator>
+      </view>
     <view class='meeting_item'>
-      <image src='../resources/008.jpg'></image>
-    </view>
+      <navigator url="./category?id=3">
+          <image src='../resources/champion 5.png' mode="aspectFit" style="height: 150rpx; border-radius: 10rpx;"></image>
+        </navigator>
+      </view>
+  </view>
+
+  <view style='border: 2px solid black; margin-top: 20rpx'>
+    sjlsjflsjflsjfljl
   </view>
 
 </view>
-<canvas canvas-id="shareCanvas" style="width:600px;height:900px"></canvas>
+<!--<canvas canvas-id="shareCanvas" style="width:600px;height:900px"></canvas>-->

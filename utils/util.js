@@ -41,7 +41,6 @@ var login = function() {
             key: 'token',
             data: res.data,
           })
-
           // this.globalData.token = res.data
         },
       })
