@@ -42,7 +42,7 @@
             </view>
         </view>
     <view class="padding flex flex-direction">
-        <button class="cu-btn bg-grey lg" style="background-color: #639764">生成报名卡</button>
+        <button class="cu-btn bg-grey lg" style="background-color: #639764" form-type="submit">生成报名卡</button>
     </view>
 </form>
 </view>

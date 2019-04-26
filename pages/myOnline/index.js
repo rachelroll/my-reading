@@ -18,7 +18,7 @@ Page({
         console.log(res.data)
         // 我的书评列表
         wx.request({
-          url: "http://127.0.0.1:8000/api/my-posts",
+          url: "https://reading-api.oeaudio.com/api/my-posts",
           data: {
             'token': res.data
           },
@@ -36,10 +36,10 @@ Page({
           fail: function (err) {
             console.log(err)
           }
-        })   
+        })
       },
     })
-   
+
   },
 
   // 点赞
@@ -57,7 +57,7 @@ Page({
 
         // 点赞
         wx.request({
-          url: "http://127.0.0.1:8000/api/post/like",
+          url: "https://reading-api.oeaudio.com/api/post/like",
 
           data: {
             'id': event.target.dataset.id,

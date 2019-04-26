@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class="page">
-  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="confirm-btn" bindtap='login'>
+  <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="confirm-btn">
     确认授权登录
   </button>
 
-    <block wx:else>
+    <block wx:else> -->
       <view class="banner flex-row">
         <view class="flex-view-item banner-left">
           <text class="userinfo-nickname">{{userInfo.nickName}}</text>
@@ -66,26 +66,26 @@
   <view class="cards">
     <view class="card-item">
       <navigator url="../register/index" hover-class="navigator-hover">
-        <image style="border-radius: 10rpx;" src="../resources/register@2x.png" mode="widthFix"></image>
+        <image style="border-radius: 5rpx;" src="../resources/register.png" mode="widthFix"></image>
       </navigator>
     </view>
 
     <view class="card-item">
       <navigator url="../recommendation/index" hover-class="navigator-hover">
-        <image style="border-radius: 10rpx;" src="../resources/share@2x.png" mode="widthFix"></image>
+        <image style="border-radius: 5rpx;" src="../resources/share@2x.png" mode="widthFix"></image>
       </navigator>
     </view>
   </view>
       <view class="cards">
         <view class="card-item">
           <navigator url="../champion/index" hover-class="navigator-hover">
-            <image style="border-radius: 10rpx;" src="../resources/champion@2x.png" mode="widthFix"></image>
+            <image style="border-radius: 5rpx;" src="../resources/champion@2x.png" mode="widthFix"></image>
           </navigator>
         </view>
 
         <view class="card-item">
           <navigator url="../user/index" hover-class="navigator-hover">
-            <image style="border-radius: 10rpx;" src="../resources/home@2x.png" mode="widthFix"></image>
+            <image style="border-radius: 5rpx;" src="../resources/home@2x.png" mode="widthFix"></image>
           </navigator>
         </view>
       </view>
@@ -93,11 +93,11 @@
       <view class="cards">
         <view class="card-item">
           <navigator url="../offline/index" hover-class="navigator-hover">
-            <image style="border-radius: 10rpx; width: 670rpx;" src="../resources/offline@2x.png" mode="widthFix"></image>
+            <image style="border-radius: 5rpx; width: 670rpx;" src="../resources/offline@2x.png" mode="widthFix"></image>
           </navigator>
         </view>
       </view>
-  </block>
+  <!-- </block> -->
 </view>
 
 

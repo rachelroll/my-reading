@@ -14,7 +14,7 @@ Page({
     console.log(options.id);
     var that = this;
     wx.request({
-      url: "http://127.0.0.1:8000/api/offlines",
+      url: "https://reading-api.oeaudio.com/api/offlines/category",
       data: {
         'id': options.id
       },

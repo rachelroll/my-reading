@@ -5,9 +5,9 @@ const app = getApp()
 Page({
   data: {
     images:[
-      '../resources/good1.jpg' ,
-      '../resources/good2.jpg' ,
-    ], 
+      '../resources/banner1@2x.png' ,
+      '../resources/banner2@2x.png' ,
+    ],
 
     books: [],
 
@@ -99,7 +99,7 @@ Page({
 
         // 点赞
         wx.request({
-          url: "http://127.0.0.1:8000/api/post/like",
+          url: "https://reading-api.oeaudio.com/api/post/like",
 
           data: {
             'id': event.target.dataset.id,

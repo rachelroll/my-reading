@@ -21,7 +21,7 @@ Page({
     });
 
     wx.request({
-      url: 'http://127.0.0.1:8000/api/posts',
+      url: 'https://reading-api.oeaudio.com/api/posts',
       success: function (res) {
 
         console.log(res.data.data)

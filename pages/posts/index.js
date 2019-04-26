@@ -38,7 +38,7 @@ Page({
   like: function(event) {
     var that = this;
     console.log(event.target.dataset.id)
-  
+
     // 从缓存中取出 token
     wx.getStorage({
       key: 'token',
@@ -49,7 +49,7 @@ Page({
 
         // 点赞
         wx.request({
-          url: "http://127.0.0.1:8000/api/post/like",
+          url: "https://reading-api.oeaudio.com/api/post/like",
 
           data: {
             'id': event.target.dataset.id,

@@ -1,0 +1,25 @@
+<view class="page">
+    <view class="cu-card article">
+        <block wx:for="{{ meetings }}" wx:for-item="meeting">
+
+        <view class="cu-item shadow">
+            <view class="title">
+                <view class="text-cut">{{ meeting.title }}</view>
+            </view>
+            <navigator url="./show?id={{ meeting.id }}">
+            <view class="content">
+                <image src="{{ meeting.cover }}" mode="widthFix" style="width: 180rpx"></image>
+                <view class="desc">
+                    <view class="text-content">{{ meeting.description }}</view>
+                    <view>
+<!--                        <view class="cu-tag bg-red light sm round">{{ meeting.subject }}</view>-->
+                        <view class="cu-tag bg-green light sm round">{{ meeting.subject }}</view>
+                    </view>
+                </view>
+            </view>
+            </navigator>
+        </view>
+
+        </block>
+    </view>
+</view>

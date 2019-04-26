@@ -1,6 +1,6 @@
  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 确认授权登录 </button>
-    <block wx:else>
+    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 确认授权登录 </button>
+    <block wx:else> -->
       <view class="banner flex-row">
         <view class="flex-view-item banner-left">
           <text class="userinfo-nickname">{{userInfo.nickName}}</text>
@@ -12,7 +12,7 @@
           <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
         </view>
       </view>
-    </block>
+    <!-- </block> -->
   </view>
 
 <view class="statistic-items">

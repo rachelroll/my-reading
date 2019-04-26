@@ -21,6 +21,7 @@ Page({
     subject: '各种沙龙',
     token: '',
     imgList: [],
+    time: '12:01',
   },
 
   showModal(e) {
@@ -45,11 +46,19 @@ Page({
   },
 
   DateChange(e) {
+    console.log('date 发生change事件，携带value值为：', e.detail.value);
     this.setData({
       date: e.detail.value
     })
   },
+  TimeChange(e) {
+    console.log('time 发生change事件，携带value值为：', e.detail.value);
+    this.setData({
+      time: e.detail.value
+    })
+  },
   RegionChange: function(e) {
+    console.log('region 发生change事件，携带value值为：', e.detail.value);
     this.setData({
       region: e.detail.value
     })
@@ -115,13 +124,15 @@ Page({
       wx.getStorage({
         key: 'token',
         success: function(res) {
+          console.log(res.data);
           // 表单提交的数据
           var data = {
             company: e.detail.value.company,
             title: e.detail.value.title,
-            date: e.detail.value.date,
+            date: that.data.date,
+            time: that.data.time,
             city: e.detail.value.city[0],
-            address: e.detail.value.address,
+            address: that.data.address,
             contact: e.detail.value.contact_name,
             phone: e.detail.value.phone,
             email: e.detail.value.email,
@@ -132,7 +143,7 @@ Page({
 
           // 上传图片及表单内容
           wx.uploadFile({
-            url: 'http://127.0.0.1:8000/api/offline',
+            url: 'https://reading-api.oeaudio.com/api/offline',
             filePath: that.data.imgList[0],
             name: 'image',
             header: {

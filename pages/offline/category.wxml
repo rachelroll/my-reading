@@ -1,32 +1,25 @@
 <view class="page">
-    <view class="cu-card case" style="padding: 30rpx">
+    <view class="cu-card article">
         <block wx:for="{{ meetings }}" wx:for-item="meeting">
+
+        <view class="cu-item shadow">
+            <view class="title">
+                <view class="text-cut">{{ meeting.title }}</view>
+            </view>
             <navigator url="./show?id={{ meeting.id }}">
-                <view class="cu-item shadow" style="margin-bottom: 30rpx">
-                    <view class="image">
-                        <image src="{{ meeting.cover }}" mode="aspectFit" style="border-radius: 10rpx; height: 360rpx"></image>
-                        <view class="cu-tag" style="background-color: #639764; color: white">{{ meeting.subject }}</view>
-                        <view class="cu-bar bg-shadeBottom">
-                            <text class="text-cut">
-                                {{ meeting.description }}
-                            </text>
-                        </view>
-                    </view>
-                    <view class="cu-list" style="padding: 30rpx">
-                        <view class="cu-item">
-                            <view class="content flex-sub">
-                                <view class="text-darkgrey">{{ meeting.title }}</view>
-                                <view class="text-gray text-sm flex justify-between">
-                                    {{ meeting.city }}
-                                    <view class="text-gray text-sm">
-                                        <text>{{ meeting.date }}</text>
-                                    </view>
-                                </view>
-                            </view>
-                        </view>
+            <view class="content">
+                <image src="{{ meeting.cover }}" mode="widthFix" style="width: 180rpx"></image>
+                <view class="desc">
+                    <view class="text-content">{{ meeting.description }}</view>
+                    <view>
+<!--                        <view class="cu-tag bg-red light sm round">{{ meeting.subject }}</view>-->
+                        <view class="cu-tag bg-green light sm round">{{ meeting.subject }}</view>
                     </view>
                 </view>
+            </view>
             </navigator>
+        </view>
+
         </block>
     </view>
 </view>

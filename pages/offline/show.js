@@ -13,7 +13,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: "http://127.0.0.1:8000/api/offline/show",
+      url: "https://reading-api.oeaudio.com/api/offline/show",
       data: {
         'id': options.id
       },

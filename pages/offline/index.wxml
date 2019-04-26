@@ -1,19 +1,9 @@
 <view class='page'>
-  <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" style="height: 100rpx; min-height: 175rpx;">
-    <swiper-item  wx:for="{{ images }}" wx:key>
-      <image src="{{item}}" mode="widthFix"></image>
-    </swiper-item>
-  </swiper>
-  <navigator url="../offline/form" hover-class="navigator-hover">
-  <button class="cu-btn block line-orange lg" style="margin: 20rpx 0; color: #639764">
-    <text class="icon-form"></text>我要发起线下读书会...
-  </button>
-  </navigator>
-
-<!--  <view class='flex title'>-->
-<!--    <text class='flex-item'>报名中</text>-->
-<!--    <text class='flex-item more'>查看更多</text>-->
-<!--  </view>-->
+<!--  <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" style="height: 100rpx; min-height: 175rpx;">-->
+<!--    <swiper-item  wx:for="{{ images }}" wx:key>-->
+<!--      <image src="{{item}}" mode="widthFix"></image>-->
+<!--    </swiper-item>-->
+<!--  </swiper>-->
 
   <view class='meeting flex'>
       <view class='meeting_item'>
@@ -24,19 +14,53 @@
 
     <view class='meeting_item'>
       <navigator url="./category?id=2">
-          <image src='../resources/champion 4.png' mode="aspectFit" style="height: 150rpx; border-radius: 10rpx;"></image>
+          <image src='../resources/champion 5.png' mode="aspectFit" style="height: 150rpx; border-radius: 10rpx;"></image>
       </navigator>
       </view>
     <view class='meeting_item'>
       <navigator url="./category?id=3">
-          <image src='../resources/champion 5.png' mode="aspectFit" style="height: 150rpx; border-radius: 10rpx;"></image>
+          <image src='../resources/champion 4.png' mode="aspectFit" style="height: 150rpx; border-radius: 10rpx;"></image>
         </navigator>
       </view>
   </view>
 
-  <view style='border: 2px solid black; margin-top: 20rpx'>
-    sjlsjflsjflsjfljl
-  </view>
-
+    <navigator url="../offline/form" hover-class="navigator-hover">
+        <button class="cu-btn block line-orange lg" style="margin: 20rpx 4rpx; color: #639764">
+            <text class="icon-form"></text>我要发起线下读书会...
+        </button>
+    </navigator>
 </view>
-<!--<canvas canvas-id="shareCanvas" style="width:600px;height:900px"></canvas>-->
+
+
+<scroll-view scroll-x class="bg-white nav " scroll-with-animation scroll-left="{{scrollLeft}}">
+    <view class="cu-item {{index==TabCur-1?'text-green cur':''}}" wx:for="{{months}}" wx:key bindtap="tabSelect"
+          data-id="{{index}}">
+        {{item}}
+    </view>
+</scroll-view>
+
+<view wx:for="{{ timeline_data }}" wx:for-index="key" wx:for-item="val">
+    <view wx:if="{{ TabCur == key }}">
+        <view class="cu-timeline" wx:for="{{ val }}" wx:for-index="k" wx:for-item="v">
+            <view class="cu-time">{{ k }}</view>
+            <view class="cu-item" wx:for="{{ v }}" wx:for-index="kk" wx:for-item="vv">
+                <view class="cu-capsule radius">
+                    <view class="cu-tag bg-cyan">{{ vv.meridiem }}</view>
+                    <view class="cu-tag line-cyan">{{ vv.time }}</view>
+                </view>
+                <view class="content bg-grey shadow-blur margin-top">
+                    <view>
+                        <text>{{ vv.title }}</text>
+                    </view>
+                    <view>
+                        <text class="text-sm">{{ vv.position }}</text>
+                    </view>
+                    <view>
+                        <text class="text-sm">{{ vv.desc }}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+

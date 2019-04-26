@@ -41,7 +41,7 @@ Page({
       }, 2000)
     } else {
       wx.request({
-        url: "http://127.0.0.1:8000/api/posts/search",
+        url: "https://reading-api.oeaudio.com/api/posts/search",
         data: {
           "search": e.detail.value.search,
         },
@@ -66,7 +66,7 @@ Page({
     console.log(event.target.dataset.id);
     // 点赞
     wx.request({
-      url: "http://127.0.0.1:8000/api/post/like",
+      url: "https://reading-api.oeaudio.com/api/post/like",
       data: {
         'id': event.target.dataset.id,
         'token': that.data.token

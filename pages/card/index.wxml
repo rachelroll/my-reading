@@ -1,26 +1,12 @@
-<!-- <view>{{time}}</view>
 
-<view>{{ book_name }}</view>
+<canvas canvas-id="shareCanvas" style="width:600px;height:500px"></canvas>
 
-<view>{{ userInfo.nickName }}</view>
-<view>{{ userInfo.avatar }}</view>
+
 <view>
-  <!-- <image src='{{ qrcode }}'></image> -->
-<!-- </view>
-<view>
-    <canvas style="width:100%;height:{{contentHeight}}px" canvas-id="myCanvas"></canvas>
     <view class="edit-footer">
-        <button class="button-done" type="primary" bindtap="savePic">
-          保存图片
+        <button class="button-done" type="primary" bindtap="savePic" style="background-color: #639764; border-radius: 10rpx">
+            保存海报去发朋友圈
         </button>
     </view>
-</view> -->
-
-
-<!--index.wxml-->
-<!-- <poster id="poster" hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
-    <button>生成海报</button>
-</poster> -->
-
-
+</view>
 

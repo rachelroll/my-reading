@@ -1,14 +1,16 @@
 .meeting{
   justify-content: space-around;
+    margin-top: 20rpx;
 }
 
 .meeting_item {
-  margin: 0 8rpx 8rpx 8rpx;
+  overflow: hidden;
   }
 
 .meeting-item image {
-    height: 300rpx;
+    height: 100rpx;
     border-radius: 10rpx;
+    overflow: hidden;
 }
 
   .page {
@@ -31,3 +33,20 @@
      color: #4F7355;
      margin-bottom:20rpx;
  }
+.line{
+    margin: 0 auto;
+    /*width: 150rpx;
+    height: 2rpx;*/
+    background-color: #D8D8D8;
+}
+.r-bg {
+    background-color: #639764;
+    border-radius: 10rpx;
+    padding: 20rpx;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

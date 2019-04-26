@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
 
 var _js = require("../../utils/util.js");
 
@@ -26,10 +26,13 @@ Page({
   // 页面加载时触发
   onLoad: function () {
     if (app.globalData.userInfo) {
+      console.log('这是首页:' + app.globalData.userInfo)
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
+
+      console.log('这是首页赋值之后: ' + this.data.userInfo.nickName)
     } else if (this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
@@ -56,7 +59,7 @@ Page({
 
     // 请求书评列表
     wx.request({
-      url: "http://127.0.0.1:8000/api/posts",
+      url: "https://reading-api.oeaudio.com/api/posts",
 
       success: function (res) {
         // console.log(res.data.data[0].cover)
@@ -73,9 +76,9 @@ Page({
       fail: function (err) {
         console.log(err)
       }
-    })
+    });
 
-    // 从缓存中取出 token
+    // 从缓存中取出 token, 请求用户表的详细信息
     wx.getStorage({
       key: 'token',
       success: function(res) {
@@ -83,14 +86,17 @@ Page({
           'token': res.data
         })
 
+        console.log(that.data.token);
+
         // 请求用户表
         wx.request({
-          url: "http://127.0.0.1:8000/api/user",
+          url: "https://reading-api.oeaudio.com/api/user",
 
           data: {
             'token': that.data.token
           },
           success: function (res) {
+              console.log(res)
             if (res.data.code == 202) {
               console.log('here it is')
               _js.login();
@@ -116,34 +122,17 @@ Page({
             console.log(err)
           }
         })
+
+        // 从缓存中取出用的基本信息
+        wx.getStorage({
+          key: 'userInfo',
+          success: function(res) {
+            that.setData({
+              'userInfo': res.data
+            })
+          },
+        })
       },
     })
   },
-
-  // login: function() {
-  //   wx.login({
-  //     success: res => {
-  //       // console.log(res)
-  //       // 发送 res.code 到后台换取 openId, sessionKey, unionId
-  //       wx.request({
-  //         url: 'http://127.0.0.1:8000/api/user-info', //接口地址
-  //         data: { code: res.code },
-  //         header: {
-  //           'content-type': 'application/json' //默认值
-  //         },
-  //         success: function (res) {
-  //           // console.log(res.data)
-
-  //           // 请求成功后, 把后台返回的 token 缓存起来
-  //           wx.setStorage({
-  //             key: 'token',
-  //             data: res.data,
-  //           })
-
-  //           that.globalData.token = res.data
-  //         },
-  //       })
-  //     }
-  //   })
-  // }
 });

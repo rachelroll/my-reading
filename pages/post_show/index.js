@@ -13,12 +13,12 @@ Page({
   onLoad: function(options) {
     // options 是个对象
     console.log(options.id)
-    
+
     var that = this;
 
     // 请求书评详情页
     wx.request({
-      url: "http://127.0.0.1:8000/api/post",
+      url: "https://reading-api.oeaudio.com/api/post",
       data: {
         'id': options.id
       },
@@ -35,11 +35,11 @@ Page({
       fail: function (err) {
         console.log(err)
       }
-    })   
+    })
 
     // 请求关于这个书评的评论
     wx.request({
-      url: "http://127.0.0.1:8000/api/comments",
+      url: "https://reading-api.oeaudio.com/api/comments",
       data: {
         'id': options.id
       },
@@ -57,7 +57,7 @@ Page({
       fail: function (err) {
         console.log(err)
       }
-    })   
+    })
   },
 
   formSubmit: function (e) {
@@ -89,7 +89,7 @@ Page({
             user_avatar: app.globalData.userInfo.avatarUrl
           }
           wx.request({
-            url: "http://127.0.0.1:8000/api/comment",
+            url: "https://reading-api.oeaudio.com/api/comment",
             data: data,
             method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
             success: function (res) {
@@ -108,7 +108,7 @@ Page({
 
               // 再次请求书评详情页
               wx.request({
-                url: "http://127.0.0.1:8000/api/comments",
+                url: "https://reading-api.oeaudio.com/api/comments",
                 data: {
                   'id': e.detail.value.id,
                 },
@@ -126,7 +126,7 @@ Page({
                 fail: function (err) {
                   console.log(err)
                 }
-              }) 
+              })
             },
             fail: function (err) {
               console.log(err)
@@ -142,7 +142,7 @@ Page({
     var that = this;
     console.log(event)
     wx.request({
-      url: "http://127.0.0.1:8000/api/post/like",
+      url: "https://reading-api.oeaudio.com/api/post/like",
 
       data: {
         'id': event.currentTarget.dataset.postId,
