@@ -23,25 +23,26 @@ const formatNumber = n => {
 }
 
 var login = function() {
-  wx.login({
+  wx.login({ // 通过这个命令获取 code, 这个 code 5 分钟有效, 只能用一次
     success: res => {
-      // console.log(res)
+
+      console.log(res);
+      var that = this;
+
       // 发送 res.code 到后台换取 openId, sessionKey, unionId
       wx.request({
-        url: 'http://127.0.0.1:8000/api/user-info', //接口地址
+        url: 'https://reading-api.oeaudio.com/api/user-info', //接口地址
         data: { code: res.code },
         header: {
           'content-type': 'application/json' //默认值
         },
         success: function (res) {
-          // console.log(res.data)
-
+          console.log('token:' + res.data)
           // 请求成功后, 把后台返回的 token 缓存起来
           wx.setStorage({
             key: 'token',
             data: res.data,
           })
-          // this.globalData.token = res.data
         },
       })
     }
@@ -101,9 +102,51 @@ function savePicToAlbum(tempFilePath) {
   })
 }
 
+
+//请求封装
+function requestHttp(url, method, data) {
+
+  //请求头设置
+  var header = {
+    Authorization: wx.getStorageSync("login_token")
+  }
+
+  return new Promise((resolve, reject) => {
+    wx.request({
+      url: config.home_config + url,
+      data: data,
+      header: header,
+      method: method,
+      success: (res => {
+        if (res.data.code === 200) {
+          resolve(res)
+        } else {
+          reject(res)
+        }
+      }),
+      fail: (res => {
+        reject(res)
+      })
+    })
+  })
+}
+
+var Sub = function (val) {
+  if (val.length == 0 || val == undefined) {
+    return;
+  } else if (val.length > 40) {
+    return val.substring(0, 40) + '...';
+  } else {
+    return val;
+  }
+}
+
+
 module.exports = {
   formatTime: formatTime,
   formatDate: formatDate,
   savePicToAlbum: savePicToAlbum,
-  login: login
+  login: login,
+  requestHttp: requestHttp,
+  Sub: Sub
 }

@@ -1,10 +1,7 @@
 //index.js
 //获取应用实例
+
 const app = getApp();
-
-console.log(app.globalData.userInfo)
-
-console.log(app.globalData)
 
 Page({
 
@@ -17,6 +14,12 @@ Page({
     token: '',
     textareaBValue: ''
   },
+    onLoad:function() {
+
+        console.log(app.globalData.userInfo)
+        console.log(234234234);
+        console.log(app.globalData)
+    },
 
   textareaBInput(e) {
     this.setData({
@@ -73,7 +76,7 @@ Page({
 
   formSubmit: function (e) {
     var that = this;
-    
+
     if (e.detail.value.book_name.length == 0) {
       wx.showToast({
         title: '请填写书名!',
