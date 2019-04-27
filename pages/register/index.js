@@ -149,6 +149,7 @@ Page({
                   },
                   dataType: 'json',
                   success: function (res) {
+                    console.log('表单提交成功')
                     app.globalData.qrcode = res.data;
                     console.log(app.globalData.qrcode)
                     // 关闭当前页面，跳转到生成读书卡页面
@@ -169,6 +170,9 @@ Page({
             }
           })
         },
+        fail: function(res) {
+          console.log('获取缓存 token 失败')
+        }
       })
     }
   },

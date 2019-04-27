@@ -40,6 +40,8 @@ App({
         })
       },
       fail() {
+
+        console.log('微信 session 失效')
         // session_key 已经失效，需要重新执行登录流程, 目前就是获取到永不过期的 token, 并存在本地
         _js.login()
       }
