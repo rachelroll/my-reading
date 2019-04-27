@@ -14,11 +14,11 @@
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  border: 2px solid white;
+    width: 128rpx;
+    height: 128rpx;
+    margin: 60rpx 15rpx;
+    border-radius: 50%;
+    border: 2px solid white;
 }
 
 .userinfo-nickname {
@@ -41,7 +41,7 @@
   background-color: #639764;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  height: 120px;
+  height: 280rpx;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -50,13 +50,13 @@
 
 .banner-left {
   /* border: 1px solid black; */
-  padding: 10px 0 0 40px;
+  padding: 40rpx 0 0 80rpx;
   line-height: 20px;
 }
 
 .banner-right {
   /* border: 1px solid black; */
-  padding-right: 30px;
+  padding-right: 80rpx;
 }
 
 .cards {

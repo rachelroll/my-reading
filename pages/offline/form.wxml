@@ -126,7 +126,7 @@
 
     <view class="cu-modal {{modalName=='Image'?'show':''}}">
         <view class="cu-dialog">
-            <view class="bg-img" style="background-image: url('../resources/new logo@2x.png');height:200px;">
+            <view class="bg-img" style="background-image: url('https://my-reading.oss-cn-beijing.aliyuncs.com/new%20logo%402x.png');height:200px;">
                 <view class="cu-bar justify-end text-white">
                     <view class="action" bindtap="hideModal">
                         <text class="icon-close "></text>

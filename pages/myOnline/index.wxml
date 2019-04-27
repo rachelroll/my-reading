@@ -1,8 +1,9 @@
 <view class="page">
-<view class="cu-card article {{isCard?'no-card':''}}">
-  <block wx:for="{{ posts }}" wx:for-item="post">
-  <view class="cu-item shadow">
-   <navigator url='../post_show/index?id={{ post.id }}'>
+  <view class="cu-card article {{isCard?'no-card':''}}">
+    <block wx:if="{{ posts.length != 0 }}">
+    <block wx:for="{{ posts }}" wx:for-item="post">
+    <view class="cu-item shadow">
+    <navigator url='../post_show/index?id={{ post.id }}'>
     <view class="title">
       <view class="text-cut">《{{ post.book_name }}》</view>
     </view>
@@ -25,7 +26,14 @@
       </view>
     </view>
      </navigator>
-  </view>
+    </view>
+    </block>
   </block>
-</view>
+  <block wx:else>
+    <view class="cu-item shadow" style='padding: 300rpx 40rpx'>
+      这里空空如也~~ 快去发表书评吧
+    </view>
+  </block>
+  
+  </view>
 </view>
