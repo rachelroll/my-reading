@@ -10,40 +10,40 @@ Page({
 
     // 在应用生命周期中, 无论如何获取到 token 了, 也就是拿到了用户的 openid, 已实现用户登录
     // 之后在 login 页面查询一下用户是否授权了 "scope.userInfo" 这个 scope, 如果已授权, 就直接拿到用户信息, 并存储在本地缓存, 然后跳转到 index 页面
-    // wx.getSetting({
-    //   success(res) {
-    //     console.log('get setting:')
-    //     console.log(res)
-    //     if (res.authSetting['scope.userInfo']) {
-    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-    //       wx.getUserInfo({
-    //         success(res) {
+    wx.getSetting({
+      success(res) {
+        console.log('get setting:')
+        console.log(res)
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          wx.getUserInfo({
+            success(res) {
 
-    //           console.log(app.globalData)
-    //           wx.setStorage({
-    //             key: 'userInfo',
-    //             data: res.userInfo,
-    //           })
+              console.log(app.globalData)
+              wx.setStorage({
+                key: 'userInfo',
+                data: res.userInfo,
+              })
 
-    //           app.globalData.userInfo = res.userInfo;
+              app.globalData.userInfo = res.userInfo;
 
-    //           console.log(app.globalData.userInfo)
+              console.log(app.globalData.userInfo)
 
-    //           //用户已经授权过
-    //           wx.redirectTo({
-    //             url: "../index/index"
-    //           })
+              //用户已经授权过
+              wx.redirectTo({
+                url: "../index/index"
+              })
 
-    //           // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-    //           // 所以此处加入 callback 以防止这种情况
-    //           if (that.userInfoReadyCallback) {
-    //             that.userInfoReadyCallback(res)
-    //           }
-    //         }
-    //       })
-    //     }
-    //   },
-    // })
+              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+              // 所以此处加入 callback 以防止这种情况
+              if (that.userInfoReadyCallback) {
+                that.userInfoReadyCallback(res)
+              }
+            }
+          })
+        }
+      },
+    })
   },
 
   // 如果页面加载时, 用户没有授权过, 程序就会走到这里, 显示让用户授权的 button

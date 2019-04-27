@@ -14,12 +14,6 @@ Page({
     token: '',
     textareaBValue: ''
   },
-    onLoad:function() {
-
-        console.log(app.globalData.userInfo)
-        console.log(234234234);
-        console.log(app.globalData)
-    },
 
   textareaBInput(e) {
     this.setData({
@@ -112,6 +106,7 @@ Page({
       wx.getStorage({
         key: 'token',
         success: function(res) {
+          console.log(2793)
           // 表单提交的数据
           var data = {
             book_name: e.detail.value.book_name,
@@ -135,7 +130,7 @@ Page({
             },
             formData: data,    //请求额外的form data
             success: function (res) {
-              console.log(res.data);
+              console.log(2424242342);
               // 如果 token 过期, 重新登录
               if (res.data.code == 202) {
                 console.log('here it is');

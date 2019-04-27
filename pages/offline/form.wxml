@@ -73,7 +73,7 @@
             </view>
         </radio-group>
 
-        <view class="cu-bar bg-white margin-top">
+        <!-- <view class="cu-bar bg-white margin-top">
             <view class="action">
                 请上传一张超燃的照片
             </view>
@@ -90,6 +90,31 @@
                 </view>
                 <view class="padding-xs solids" bindtap="ChooseImage" wx:if="{{imgList.length<1}}">
                     <text class="icon-cameraadd"></text>
+                </view>
+            </view>
+        </view> -->
+
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <view class="weui-uploader">
+                    <view class="weui-uploader__hd">
+                        <view class="weui-uploader__title">请上传一张封面图</view>
+                        <view class="weui-uploader__info">{{images.length}}/1</view>
+                    </view>
+                    <view class="weui-uploader__bd">
+                        <view class="weui-uploader__files" id="uploaderFiles" name="cover">
+                            <block wx:for="{{images}}" wx:key="*this">
+                                <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                                </view>
+                            </block>
+                        </view>
+                        <block wx:if="{{images.length != 1}}">
+                            <view class="weui-uploader__input-box">
+                                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                            </view>
+                        </block>
+                    </view>
                 </view>
             </view>
         </view>

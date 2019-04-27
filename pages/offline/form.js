@@ -22,6 +22,7 @@ Page({
     token: '',
     imgList: [],
     time: '12:01',
+    images: [],//临时图片地址
   },
 
   showModal(e) {
@@ -64,46 +65,70 @@ Page({
     })
   },
 
-  ChooseImage() {
+  // ChooseImage() {
+  //   wx.chooseImage({
+  //     count: 1, //默认9
+  //     sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+  //     sourceType: ['album'], //从相册选择
+  //     success: (res) => {
+  //       if (this.data.imgList.length != 0) {
+  //         this.setData({
+  //           imgList: this.data.imgList.concat(res.tempFilePaths)
+  //         })
+  //       } else {
+  //         this.setData({
+  //           imgList: res.tempFilePaths
+  //         })
+  //       }
+  //     }
+  //   });
+  // },
+  // ViewImage(e) {
+  //   wx.previewImage({
+  //     urls: this.data.imgList,
+  //     current: e.currentTarget.dataset.url
+  //   });
+  // },
+  // DelImg(e) {
+  //   wx.showModal({
+  //     title: '才子',
+  //     content: '确定要删除这张照片吗？',
+  //     cancelText: '再看看',
+  //     confirmText: '再见',
+  //     success: res => {
+  //       if (res.confirm) {
+  //         this.data.imgList.splice(e.currentTarget.dataset.index, 1);
+  //         this.setData({
+  //           imgList: this.data.imgList
+  //         })
+  //       }
+  //     }
+  //   })
+  // },
+
+
+  chooseImage: function () {
+    var that = this;
     wx.chooseImage({
-      count: 1, //默认9
-      sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
-      sourceType: ['album'], //从相册选择
-      success: (res) => {
-        if (this.data.imgList.length != 0) {
-          this.setData({
-            imgList: this.data.imgList.concat(res.tempFilePaths)
-          })
-        } else {
-          this.setData({
-            imgList: res.tempFilePaths
-          })
-        }
-      }
-    });
-  },
-  ViewImage(e) {
-    wx.previewImage({
-      urls: this.data.imgList,
-      current: e.currentTarget.dataset.url
-    });
-  },
-  DelImg(e) {
-    wx.showModal({
-      title: '才子',
-      content: '确定要删除这张照片吗？',
-      cancelText: '再看看',
-      confirmText: '再见',
-      success: res => {
-        if (res.confirm) {
-          this.data.imgList.splice(e.currentTarget.dataset.index, 1);
-          this.setData({
-            imgList: this.data.imgList
-          })
-        }
+      count: 1, // 默认9
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        console.log(res);
+        var tempFilePaths = res.tempFilePaths
+        that.setData({
+          images: that.data.images.concat(tempFilePaths)
+        })
       }
     })
   },
+  previewImage: function (e) {
+    wx.previewImage({
+      current: e.currentTarget.id, // 当前显示图片的http链接
+      urls: this.data.images // 需要预览的图片http链接列表
+    })
+  },
+
 
   formSubmit: function (e) {
     var that = this;
@@ -118,7 +143,7 @@ Page({
         wx.hideToast()
       }, 2000)
     } else {
-      console.log(that.data.imgList[0]);
+      console.log(that.data.images[0]);
 
       // 提交表单
       wx.getStorage({
@@ -144,7 +169,7 @@ Page({
           // 上传图片及表单内容
           wx.uploadFile({
             url: 'https://reading-api.oeaudio.com/api/offline',
-            filePath: that.data.imgList[0],
+            filePath: that.data.images[0],
             name: 'image',
             header: {
               'content-type': 'multipart/form-data'

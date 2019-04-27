@@ -18,7 +18,6 @@ App({
     // 查看 session_key 是否过期
     wx.checkSession({
       success() {
-
         // session_key 未过期，并且在本生命周期一直有效
         wx.getStorage({
           key: 'token',
@@ -27,6 +26,7 @@ App({
 
             // 如果本地没有 token, 需要重新走登录流程, 目前就是获取到永不过期的 token, 并存在本地
             if (!res.data) {
+              console.log('!!!!!')
 
               _js.login()
             } else {
@@ -34,6 +34,9 @@ App({
               console.log('微信和第三方 session 都有, 获取到第三方 token:' + res.data)
             }
           },
+          fail: function(res) {
+            console.log('fail')
+          }
         })
       },
       fail() {
