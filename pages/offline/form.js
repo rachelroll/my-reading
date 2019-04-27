@@ -131,6 +131,9 @@ Page({
 
 
   formSubmit: function (e) {
+    console.log('city' + e.detail.value.city)
+    console.log(e.detail.value)
+
     var that = this;
     that.data.userInfo = app.globalData.userInfo;
     if (e.detail.value.title.length == 0 || e.detail.value.address.length == 0 || e.detail.value.contact_name.length == 0 || e.detail.value.phone.length == 0 || e.detail.value.description.length == 0) {
@@ -149,15 +152,16 @@ Page({
       wx.getStorage({
         key: 'token',
         success: function(res) {
-          console.log(res.data);
+          console.log(that.data.images[0]);
           // 表单提交的数据
           var data = {
             company: e.detail.value.company,
             title: e.detail.value.title,
             date: that.data.date,
             time: that.data.time,
-            city: e.detail.value.city[0],
-            address: that.data.address,
+            city: e.detail.value.city.join('|'),
+            
+            address: e.detail.value.address,
             contact: e.detail.value.contact_name,
             phone: e.detail.value.phone,
             email: e.detail.value.email,
@@ -165,6 +169,8 @@ Page({
             description: e.detail.value.description,
             token: res.data,
           }
+
+       
 
           // 上传图片及表单内容
           wx.uploadFile({
