@@ -101,8 +101,11 @@ data: {
         }
     },
     tabSelect(e) {
+        console.log(e.currentTarget.dataset.id)
+        console.log('ross')
         this.setData({
-            TabCur: e.currentTarget.dataset.id,
+
+            TabCur: e.currentTarget.dataset.id + 1,
             scrollLeft: (e.currentTarget.dataset.id-1)*60
         })
     },
@@ -115,6 +118,8 @@ data: {
             url: "https://reading-api.oeaudio.com/api/offlines",
 
             success: function (res) {
+                console.log(234234);
+                console.log(res);
                 console.log(res.data);
                 var arr = Object.keys(res.data);
                 console.log(arr[0]);

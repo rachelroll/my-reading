@@ -48,7 +48,7 @@
                     <view class="cu-tag bg-cyan">{{ vv.meridiem }}</view>
                     <view class="cu-tag line-cyan">{{ vv.time }}</view>
                 </view>
-                
+
                   <view class="content bg-grey shadow-blur margin-top">
                   <navigator url='./show?id={{ vv.id }}'>
                     <view>
@@ -62,7 +62,7 @@
                     </view>
                     </navigator>
                 </view>
-                
+
             </view>
         </view>
     </view>

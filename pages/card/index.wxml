@@ -1,5 +1,10 @@
 
-<canvas canvas-id="shareCanvas" style="width:600px;height:500px"></canvas>
+<view class='page'>
+    <view style="position: relative; border:1px solid red;height: 600rpx;">
+        <canvas class="self-center" canvas-id="shareCanvas" style="width:750rpx;height:1000rpx; display: block; margin: 0 auto"></canvas>
+    </view>
+
+</view>
 
 
 <view>
