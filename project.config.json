@@ -1,153 +1,152 @@
 {
-  "description": "Project configuration file",
-  "packOptions": {
-    "ignore": []
-  },
-  "setting": {
-    "urlCheck": false,
-    "es6": true,
-    "postcss": true,
-    "minified": true,
-    "newFeature": true,
-    "autoAudits": false
-  },
-  "compileType": "miniprogram",
-  "libVersion": "2.6.4",
-  "appid": "wx9e9419dd8bd4343f",
-  "projectname": "my-reading",
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "isGameTourist": false,
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
-  "condition": {
-    "search": {
-      "current": -1,
-      "list": []
-    },
-    "conversation": {
-      "current": -1,
-      "list": []
-    },
-    "plugin": {
-      "current": -1,
-      "list": []
-    },
-    "game": {
-      "currentL": -1,
-      "list": []
-    },
-    "miniprogram": {
-      "current": 14,
-      "list": [
-        {
-          "id": 0,
-          "name": "报名页",
-          "pathName": "pages/register/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "好友金句",
-          "pathName": "pages/recommendation/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": 2,
-          "name": "冠军排行",
-          "pathName": "pages/champion/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "我的主页",
-          "pathName": "pages/user/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "线下读书会",
-          "pathName": "pages/offline/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "图书详情页",
-          "pathName": "pages/book_info/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "读书卡页面",
-          "pathName": "pages/card/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": 7,
-          "name": "书评列表",
-          "pathName": "pages/posts/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "我的线上",
-          "pathName": "pages/myOnline/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "书评展示页",
-          "pathName": "pages/post_show/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "搜索页",
-          "pathName": "pages/search/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "报名页",
-          "pathName": "pages/register/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "发起读书会表单页",
-          "pathName": "pages/offline/form",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "线下读书会列表页",
-          "pathName": "pages/offline/category",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "线下读书会详情页",
-          "pathName": "pages/offline/show",
-          "query": "",
-          "scene": null
-        }
-      ]
-    }
-  }
+	"description": "Project configuration file",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.4",
+	"appid": "wx9e9419dd8bd4343f",
+	"projectname": "my-reading",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 14,
+			"list": [
+				{
+					"id": 0,
+					"name": "报名页",
+					"pathName": "pages/register/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "好友金句",
+					"pathName": "pages/recommendation/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "冠军排行",
+					"pathName": "pages/champion/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的主页",
+					"pathName": "pages/user/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "线下读书会",
+					"pathName": "pages/offline/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "图书详情页",
+					"pathName": "pages/book_info/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "读书卡页面",
+					"pathName": "pages/card/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "书评列表",
+					"pathName": "pages/posts/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的线上",
+					"pathName": "pages/myOnline/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "书评展示页",
+					"pathName": "pages/post_show/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索页",
+					"pathName": "pages/search/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "报名页",
+					"pathName": "pages/register/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发起读书会表单页",
+					"pathName": "pages/offline/form",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "线下读书会列表页",
+					"pathName": "pages/offline/category",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "线下读书会详情页",
+					"pathName": "pages/offline/show",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
 }
-

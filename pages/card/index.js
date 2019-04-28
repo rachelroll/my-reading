@@ -16,10 +16,20 @@ Page({
 
       // 调用函数时，传入new Date()参数，返回值是日期和时间
       var time = util.formatTime(new Date());
+      wx.getSystemInfo({
+          success: function(res) {
+              that.myCanvasWidth = res.windowWidth;
+              that.myCanvasHeight = res.windowHeight - 200;
+          },
+      });
+      console.log(that.myCanvasWidth);
       // 再通过setData更改Page()里面的data，动态更新页面的数据
       this.setData({
-          time: time
+          time: time,
+          canvasWidth: that.myCanvasWidth,
+          canvasHeight: that.myCanvasHeight
       });
+
 
     var content = util.Sub(options.content)
 
@@ -39,7 +49,7 @@ Page({
           console.log('昵称' + app.globalData.userInfo.nickName)
 
           // 底图
-          ctx.drawImage(image_path, 15, 15, res[0].width/2, res[0].height/2)
+          ctx.drawImage(image_path, 0, 0, that.myCanvasWidth, that.myCanvasHeight)
 
           // 书名
           ctx.setFillStyle('#333');  // 文字颜色：黑色

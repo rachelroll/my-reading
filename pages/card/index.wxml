@@ -1,8 +1,6 @@
 
 <view class='page'>
-    <view style="position: relative; border:1px solid red;height: 600rpx;">
-        <canvas class="self-center" canvas-id="shareCanvas" style="width:750rpx;height:1000rpx; display: block; margin: 0 auto"></canvas>
-    </view>
+        <canvas class="self-center" canvas-id="shareCanvas" style="width:{{canvasWidth}}px; height:{{canvasHeight}}px;  display: block; margin: 0 auto"></canvas>
 
 </view>
 
