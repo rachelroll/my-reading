@@ -47,9 +47,9 @@ Page({
       console.log(res.target)
     }
     return {
-      title: '佳禾读书会',
+      title: '佳禾读书争霸赛，邀你一起来读书',
       path: '/page/index',
-      imageUrl: '',
+      imageUrl: 'https://reading-api.oss-cn-beijing.aliyuncs.com/images/share.png',
     }
   }
 })

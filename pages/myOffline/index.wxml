@@ -6,7 +6,7 @@
             <view class="title">
                 <view class="text-cut">{{ meeting.title }}</view>
             </view>
-            <navigator url="./show?id={{ meeting.id }}">
+            <navigator url="../offline/show?id={{ meeting.id }}">
             <view class="content">
                 <image src="{{ meeting.cover }}" mode="widthFix" style="width: 180rpx"></image>
                 <view class="desc">

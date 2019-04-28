@@ -10,6 +10,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     age: '0 天',
     posts_count: 0,
+    likes_count: 0
   },
   //事件处理函数
   bindViewTap: function () {
@@ -39,10 +40,39 @@ Page({
     });
 
     wx.getStorage({
+      key: 'comments_count',
+      success: function (res) {
+        that.setData({
+          comments_count: res.data
+        })
+      },
+    });
+
+    wx.getStorage({
       key: 'posts_count',
       success: function(res) {
         that.setData({
           posts_count: res.data
+        })
+      },
+    })
+
+    wx.getStorage({
+      key: 'token',
+      success: function(res) {
+        wx.request({
+          url: "https://reading-api.oeaudio.com/api/posts/total-likes",
+          data: {
+            token: res.data
+          },
+          success: function (res) {
+            that.setData({
+              likes_count: res.data
+            })
+          },
+          fail: function (err) {
+            console.log(err)
+          }
         })
       },
     })

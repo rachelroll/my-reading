@@ -17,16 +17,16 @@
 
 <view class="statistic-items">
   <view class="item">
-    <text>10</text>
-    <text>想读</text>
+    <text>{{ likes_count }}</text>
+    <text>被赞</text>
   </view>
   <view class="item">
-    <text>10</text>
-    <text>已报名</text>
-  </view>
-  <view class="item">
-    <text>10</text>
+    <text>{{ posts_count }}</text>
     <text>读过</text>
+  </view>
+  <view class="item">
+    <text>{{ comments_count }}</text>
+    <text>被评</text>
   </view>
 </view>
 

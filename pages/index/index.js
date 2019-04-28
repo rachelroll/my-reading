@@ -115,6 +115,11 @@ Page({
               wx.setStorage({
                 key: 'posts_count',
                 data: res.data.data.posts_count,
+              });
+
+              wx.setStorage({
+                key: 'comments_count',
+                data: res.data.data.comments_count,
               })
             }
           },
