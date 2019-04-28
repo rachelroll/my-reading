@@ -1,8 +1,8 @@
 Page({
   data: {
     images: [
-      '../resources/banner1@2x.png',
-      '../resources/banner2@2x.png'
+      'https://reading-api.oss-cn-beijing.aliyuncs.com/images/banner1%402x.png',
+      'https://reading-api.oss-cn-beijing.aliyuncs.com/images/banner2%402x.png'
     ],
     userInfo: {},
     posts:[]
@@ -10,6 +10,10 @@ Page({
 
   onLoad:function() {
     var that = this;
+
+    this.setData({
+      loadModal: true
+    })
 
     wx.getStorage({
       key: 'userInfo',
@@ -26,7 +30,8 @@ Page({
 
         console.log(res.data.data)
         that.setData({
-          'posts': res.data.data
+          'posts': res.data.data,
+          'loadModal': false
         });
       },
       fail: function (err) {

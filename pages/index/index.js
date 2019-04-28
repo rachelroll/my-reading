@@ -29,7 +29,7 @@ Page({
       console.log('这是首页:' + app.globalData.userInfo)
       this.setData({
         userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        hasUserInfo: true,
       })
 
       console.log('这是首页赋值之后: ' + this.data.userInfo.nickName)
@@ -104,7 +104,7 @@ Page({
               console.log(res.data.data.age)
               that.setData({
                 'posts_count': res.data.data.posts_count,
-                'age': res.data.data.age
+                'age': res.data.data.age,
               });
 
               wx.setStorage({

@@ -48,4 +48,11 @@
         </view>
       </view>
     </view>
+
+    <!-- 加载 modal 框 -->
+  <view class='cu-load load-modal' wx:if="{{loadModal}}">
+      <image src='https://reading-api.oss-cn-beijing.aliyuncs.com/images/logo-avatar.png' class='png' mode='aspectFit'></image>
+      <view class='gray-text'>请稍等...</view>
+  </view>
+
 </view>

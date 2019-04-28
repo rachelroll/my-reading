@@ -5,8 +5,8 @@ const app = getApp()
 Page({
   data: {
     images:[
-      '../resources/banner1@2x.png' ,
-      '../resources/banner2@2x.png' ,
+      'https://reading-api.oss-cn-beijing.aliyuncs.com/images/banner1%402x.png' ,
+      'https://reading-api.oss-cn-beijing.aliyuncs.com/images/banner2%402x.png' ,
     ],
 
     books: [],

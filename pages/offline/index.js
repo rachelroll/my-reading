@@ -8,8 +8,8 @@ Page({
 
 data: {
         images: [
-            '../resources/banner1@2x.png',
-            '../resources/banner2@2x.png'
+            'https://reading-api.oss-cn-beijing.aliyuncs.com/images/banner1%402x.png',
+            'https://reading-api.oss-cn-beijing.aliyuncs.com/images/banner2%402x.png'
         ],
         TabCur: 0,
         scrollLeft:0,
@@ -113,6 +113,9 @@ data: {
      * Lifecycle function--Called when page load
      */
     onLoad: function (options) {
+      this.setData({
+        loadModal: true
+      })
         var that = this;
         wx.request({
             url: "https://reading-api.oeaudio.com/api/offlines",
@@ -127,7 +130,8 @@ data: {
                 // 通过 setData 函数给 data 里的数据赋值
                 that.setData({
                     'timeline_data': res.data,
-                    'TabCur': arr[0]
+                    'TabCur': arr[0],
+                    'loadModal': false
                 });
 
             },

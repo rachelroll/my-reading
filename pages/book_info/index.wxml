@@ -1,7 +1,16 @@
 <!-- 引入模板 -->
 <import src="../../wxParse/wxParse.wxml"/>
 
-<view class='wrap-container'>
-  <template is="wxParse" data="{{wxParseData:article.nodes}}" class='book-content' />
+<view class="page">
+  <view class='wrap-container'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" class='book-content' />
+  </view>
+
+      <!-- 加载 modal 框 -->
+  <view class='cu-load load-modal' wx:if="{{loadModal}}">
+      <image src='https://reading-api.oss-cn-beijing.aliyuncs.com/images/logo-avatar.png' class='png' mode='aspectFit'></image>
+      <view class='gray-text'>好书不怕等...</view>
+  </view>
 </view>
+
 

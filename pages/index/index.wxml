@@ -66,26 +66,26 @@
   <view class="cards">
     <view class="card-item">
       <navigator url="../register/index" hover-class="navigator-hover">
-        <image style="border-radius: 5rpx;" src="../resources/register.png" mode="widthFix"></image>
+        <image style="border-radius: 5rpx;" src="https://reading-api.oss-cn-beijing.aliyuncs.com/images/register.png" mode="widthFix"></image>
       </navigator>
     </view>
 
     <view class="card-item">
       <navigator url="../recommendation/index" hover-class="navigator-hover">
-        <image style="border-radius: 5rpx;" src="../resources/share@2x.png" mode="widthFix"></image>
+        <image style="border-radius: 5rpx;" src="https://reading-api.oss-cn-beijing.aliyuncs.com/images/share%402x.png" mode="widthFix"></image>
       </navigator>
     </view>
   </view>
       <view class="cards">
         <view class="card-item">
           <navigator url="../champion/index" hover-class="navigator-hover">
-            <image style="border-radius: 5rpx;" src="../resources/champion@2x.png" mode="widthFix"></image>
+            <image style="border-radius: 5rpx;" src="https://reading-api.oss-cn-beijing.aliyuncs.com/images/champion%402x.png" mode="widthFix"></image>
           </navigator>
         </view>
 
         <view class="card-item">
           <navigator url="../user/index" hover-class="navigator-hover">
-            <image style="border-radius: 5rpx;" src="../resources/home@2x.png" mode="widthFix"></image>
+            <image style="border-radius: 5rpx;" src="https://reading-api.oss-cn-beijing.aliyuncs.com/images/home%402x.png" mode="widthFix"></image>
           </navigator>
         </view>
       </view>
@@ -93,7 +93,7 @@
       <view class="cards">
         <view class="card-item">
           <navigator url="../offline/index" hover-class="navigator-hover">
-            <image style="border-radius: 5rpx; width: 670rpx;" src="../resources/offline@2x.png" mode="widthFix"></image>
+            <image style="border-radius: 5rpx; width: 670rpx;" src="https://reading-api.oss-cn-beijing.aliyuncs.com/images/offline%402x.png" mode="widthFix"></image>
           </navigator>
         </view>
       </view>

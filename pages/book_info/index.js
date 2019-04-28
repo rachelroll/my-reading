@@ -9,6 +9,10 @@ Page({
  onLoad: function(options) {
     console.log(options)
 
+   this.setData({
+     loadModal: true
+   })
+
     var that = this;
     wx.request({
       url: "https://api-miniapp.dushu.io/books/info",
@@ -21,7 +25,8 @@ Page({
         console.log(res.data);
 
         that.setData({
-          'content': res.data.content
+          'content': res.data.content,
+          'loadModal': false
         });
 
         var article = that.data.content;
