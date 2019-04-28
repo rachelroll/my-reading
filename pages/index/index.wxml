@@ -34,7 +34,7 @@
       <view class="comments">
         <text class="icon-notificationfill lg text-gray" style="color: #639764; margin-right: 10rpx"></text>
         <text>{{ post.user_nickname }} 评论了</text>
-        <text style='color: #639764'>{{ post.book_name }}</text>
+        <text style='color: #639764'>《{{ post.book_name }}》</text>
        </view>
     </swiper-item>
   </block>
