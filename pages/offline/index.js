@@ -102,7 +102,6 @@ data: {
     },
     tabSelect(e) {
         console.log(e.currentTarget.dataset.id)
-        console.log('ross')
         this.setData({
 
             TabCur: e.currentTarget.dataset.id + 1,
