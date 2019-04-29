@@ -19,7 +19,7 @@ Page({
       wx.getSystemInfo({
           success: function(res) {
               that.myCanvasWidth = res.windowWidth;
-              that.myCanvasHeight = res.windowHeight - 200;
+              that.myCanvasHeight = res.windowHeight - 140;
           },
       });
       console.log(that.myCanvasWidth);
@@ -49,7 +49,7 @@ Page({
           console.log('昵称' + app.globalData.userInfo.nickName)
 
           // 底图
-          ctx.drawImage(image_path, 0, 0, that.myCanvasWidth, that.myCanvasHeight)
+          ctx.drawImage(image_path, 0, 15, that.myCanvasWidth, that.myCanvasHeight)
 
           // 书名
           ctx.setFillStyle('#333');  // 文字颜色：黑色
@@ -115,8 +115,9 @@ Page({
 
 
           // 小程序码
-          const qrImgSize = 45;
-          var qrUrl = app.globalData.qrcode;
+          const qrImgSize = 100;
+          // var qrUrl = app.globalData.qrcode;
+          var qrUrl = 'https://reading-api.oss-cn-beijing.aliyuncs.com/images/gh_8f26266272a7_430.jpg';
           ctx.drawImage(qrUrl, (636 - qrImgSize) / 2, 430, qrImgSize, qrImgSize);
 
           ctx.stroke()

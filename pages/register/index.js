@@ -101,7 +101,7 @@ Page({
     } else {
       console.log(that.data.images[0]);
       console.log(app.globalData.userInfo)
-
+console.log('rosssss')
       // 提交表单
       wx.getStorage({
         key: 'token',

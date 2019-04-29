@@ -1,6 +1,6 @@
 
 <view class='page'>
-        <canvas class="self-center" canvas-id="shareCanvas" style="width:{{canvasWidth}}px; height:{{canvasHeight}}px;  display: block; margin: 0 auto"></canvas>
+        <canvas class="self-center" canvas-id="shareCanvas" style="width:{{canvasWidth}}px; height:{{canvasHeight + 15}}px;  display: block; margin: 0 auto;"></canvas>
 
 </view>
 
