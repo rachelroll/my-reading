@@ -37,7 +37,7 @@ Page({
 
       Promise.all([
           wxGetImageInfo({
-              src: '../../images/register-card@2x.png'
+              src: '../../images/register-card@2x-750.png'
           }),
           // wxGetImageInfo({
           //     src: 'https://file.iviewui.com/weapp/dist/e5da9fdc97a0b3fb16c115d379820583.jpg'
@@ -54,71 +54,71 @@ Page({
           // 书名
           ctx.setFillStyle('#333');  // 文字颜色：黑色
           ctx.setFontSize(16);        // 文字字号：22px
-          ctx.fillText('书名:《' + options.book + '》', 40, 180);
+          ctx.fillText('书名:《' + options.book + '》', 56, 190);
 
           // 昵称
           ctx.setFillStyle('#333');  // 文字颜色：黑色
           ctx.setFontSize(14);        // 文字字号：22px
-          ctx.fillText(app.globalData.userInfo.nickName, 250, 180);
+          ctx.fillText(app.globalData.userInfo.nickName, 250, 190);
 
           // 头像
           const avatarImgSize = 38
-          ctx.drawImage(app.globalData.userInfo.avatarUrl, (640 - avatarImgSize) / 2, 156, avatarImgSize, avatarImgSize)
+          ctx.drawImage(app.globalData.userInfo.avatarUrl, (640 - avatarImgSize) / 2, 170, avatarImgSize, avatarImgSize)
 
           // 报名时间
           ctx.setFillStyle('#666');  // 文字颜色：黑色
           ctx.setFontSize(14);        // 文字字号：22px
-          ctx.fillText('报名时间: ' + that.data.time, 40, 230);
+          ctx.fillText('报名时间: ' + that.data.time, 56, 230);
 
           // 我的书评
           ctx.setFillStyle('#666');  // 文字颜色：黑色
           ctx.setFontSize(14);        // 文字字号：22px
-          ctx.fillText('我的书评:', 40, 260);
+          ctx.fillText('我的书评:', 56, 260);
 
           const metrics = ctx.measureText(options.content)
           console.log(metrics.width)
 
          ctx.setFillStyle('#666');  // 文字颜色：黑色
          ctx.setFontSize(14);        // 文字字号：22px
-            ctx.fillText(content, 40, 285);
+            ctx.fillText(content, 56, 285);
 
 
           // 比赛规则
           ctx.setFillStyle('#666');  // 文字颜色：黑色
           ctx.setFontSize(14);        // 文字字号：22px
-          ctx.fillText('比赛规则:', 40, 340);
+          ctx.fillText('比赛规则:', 56, 340);
 
           ctx.setFillStyle('#666');  // 文字颜色：黑色
           ctx.setFontSize(14);        // 文字字号：22px
-          ctx.fillText('进入小程序注册账号，通读一本书，参与书籍评', 40, 365);
+          ctx.fillText('进入小程序注册账号，通读一本书，参与书籍评', 56, 365);
 
           ctx.setFillStyle('#666');  // 文字颜色：黑色
           ctx.setFontSize(14);        // 文字字号：22px
-          ctx.fillText('论比赛，邀请好友点赞，点赞数值达到一定量，', 40, 385);
+          ctx.fillText('论比赛，邀请好友点赞，点赞数值达到一定量，', 56, 385);
 
           ctx.setFillStyle('#666');  // 文字颜色：黑色
           ctx.setFontSize(14);        // 文字字号：22px
-          ctx.fillText('即可获得小程序赠送的精美礼品。', 40, 405);
+          ctx.fillText('即可获得小程序赠送的精美礼品。', 56, 405);
 
           ctx.setFillStyle('#666');  // 文字颜色：黑色
           ctx.setFontSize(14);        // 文字字号：22px
-          ctx.fillText('赶紧扫码参与佳禾读书会，帮我点赞，', 40, 445);
+          ctx.fillText('赶紧扫码参与佳禾读书会，帮我点赞，', 56, 445);
 
           ctx.setFillStyle('#666');  // 文字颜色：黑色
           ctx.setFontSize(14);        // 文字字号：22px
-          ctx.fillText('和我一起畅游在知识的海洋，给自己', 40, 465);
+          ctx.fillText('和我一起畅游在知识的海洋，给自己', 56, 465);
 
           ctx.setFillStyle('#666');  // 文字颜色：黑色
           ctx.setFontSize(14);        // 文字字号：22px
-          ctx.fillText('创造机会做出改变。', 40, 485);
+          ctx.fillText('创造机会做出改变。', 56, 485);
 
 
 
           // 小程序码
-          const qrImgSize = 100;
+          const qrImgSize = 110;
           // var qrUrl = app.globalData.qrcode;
           var qrUrl = 'https://reading-api.oss-cn-beijing.aliyuncs.com/images/gh_8f26266272a7_430.jpg';
-          ctx.drawImage(qrUrl, (636 - qrImgSize) / 2, 430, qrImgSize, qrImgSize);
+          ctx.drawImage(qrUrl, (670 - qrImgSize) / 2, 430, qrImgSize, qrImgSize);
 
           ctx.stroke()
           ctx.draw()

@@ -121,7 +121,6 @@ data: {
             url: "https://reading-api.oeaudio.com/api/offlines",
 
             success: function (res) {
-                console.log(234234);
                 console.log(res);
                 console.log(res.data);
                 var arr = Object.keys(res.data);
